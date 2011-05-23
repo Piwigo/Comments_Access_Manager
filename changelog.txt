@@ -1,0 +1,4 @@
+Plugin Name: Comments Access Manager
+** Change log **
+
+-- 2011-05-23 : 2.2.0 - Initial Release
