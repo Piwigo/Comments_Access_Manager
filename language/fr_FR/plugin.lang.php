@@ -10,7 +10,7 @@ $lang['CM_Comments_For_Group'] = 'Autoriser les commentaires pour un groupe d\'u
 $lang['CM_AllowedComm_Group'] = 'Sélectionnez le groupe d\'utilisateurs autorisé à poster des commentaires :';
 $lang['CM_Not_Allowed_Author'] = 'Désolé, vous n\'êtes pas autorisé à poster un commentaire. Veuillez contacter l\'administrateur du site.';
 $lang['CM_Support_txt'] = 'Le support officiel sur ce plugin se fait exclusivement sur ce fil du forum FR de Piwigo:<br>
-<a href="http://fr.piwigo.org/forum/viewtopic.php?id=[todefine]" onclick="window.open(this.href);return false;">Forum français - http://fr.piwigo.org/forum/viewtopic.php?id=[todefine]</a>
+<a href="http://fr.piwigo.org/forum/viewtopic.php?id=20248" onclick="window.open(this.href);return false;">Forum français - http://fr.piwigo.org/forum/viewtopic.php?id=20248</a>
 <br><br>
 Egalement disponible, le bugtracker du projet: <a href="http://piwigo.org/bugs/" onclick="window.open(this.href);return false;">http://piwigo.org/bugs/</a>';
 $lang['CM_Empty Author'] = 'Le nom de l\'auteur du commentaire est obligatoire !';
