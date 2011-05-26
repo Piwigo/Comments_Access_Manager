@@ -100,4 +100,31 @@ WHERE param = "CommentsManager"
 
   conf_update_param('CommentsManager', pwg_db_real_escape_string($update_conf));
 }
+
+
+/* upgrade from 2.2.1 to 2.2.2 */
+/* *************************** */
+function upgradeCM_221_222()
+{
+  global $conf;
+
+  // Upgrading options
+  $query = '
+SELECT value
+  FROM '.CONFIG_TABLE.'
+WHERE param = "CommentsManager"
+;';
+
+  $result = pwg_query($query);
+  $conf_CM = pwg_db_fetch_assoc($result);
+    
+  $Newconf_CM = unserialize($conf_CM['value']);
+  
+  $Newconf_CM[6] = 'false';
+  $Newconf_CM[7] = '-1';
+  
+  $update_conf = serialize($Newconf_CM);
+
+  conf_update_param('CommentsManager', pwg_db_real_escape_string($update_conf));
+}
 ?>

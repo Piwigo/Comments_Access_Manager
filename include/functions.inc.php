@@ -43,12 +43,26 @@ function CM_CheckCommentAuthor($comment_action, $comm)
 
   $conf_CM = unserialize($conf['CommentsManager']);
 
-// Does not allow empty author name on comments for all
-  if (isset($conf_CM[1]) and $conf_CM[1] == 'true' and $comm['author'] == 'guest' and $conf['comments_forall'])
+  if ($conf['comments_forall'])
   {
-    $comment_action = 'reject';
+    // Does not allow empty author name on comments for all
+    if ((isset($conf_CM[1]) and $conf_CM[1] == 'true') and $comm['author'] == 'guest')
+    {
+      $comment_action = 'reject';
 
-    array_push($infos, l10n('CM_Empty Author'));
+      array_push($infos, l10n('CM_Empty Author'));
+    }
+    elseif ((isset($conf_CM[6]) and $conf_CM[6] == 'true') and $comm['author'] != 'guest')
+    {
+      if (CM_CheckValidGroup($comm['author']) or is_admin())
+      {
+        $comment_action = 'validate'; // Comment is validated if author is not in the validated group
+      }
+      else
+      {
+        $comment_action = 'moderate'; // Comment needs moderation if author is not in the validated group
+      }
+    }
   }
 
 // Rules on comments NOT for all
@@ -147,9 +161,22 @@ function CM_CheckValidGroup($author)
 	// Get CM configuration
   $conf_CM = unserialize($conf['CommentsManager']);
   
-  if (isset($conf_CM[5]) and $conf_CM[5] <> -1)
+  if ($conf['comments_forall'])
   {
-    $query = '
+    if (isset($conf_CM[7]) and $conf_CM[7] <> -1)
+    {
+      $group_id = $conf_CM[7];
+    }
+  }
+  else
+  {
+    if (isset($conf_CM[5]) and $conf_CM[5] <> -1)
+    {
+      $group_id = $conf_CM[5];
+    }
+  }
+
+  $query = '
 SELECT u.id,
        u.username,
        ug.user_id,
@@ -158,18 +185,17 @@ FROM '.USERS_TABLE.' AS u
   INNER JOIN '.USER_GROUP_TABLE.' AS ug
     ON u.id = ug.user_id
 WHERE u.username LIKE "'.$author.'"
-  AND ug.group_id = '.$conf_CM[5].'
+  AND ug.group_id = '.$group_id.'
 ;';
 
-    $count = pwg_db_num_rows(pwg_query($query));
+  $count = pwg_db_num_rows(pwg_query($query));
 
-    if (is_null($count) or $count == 0)
-    {
-      return false;
-    }
-    else
-      return true;
+  if (is_null($count) or $count == 0)
+  {
+    return false;
   }
+  else
+    return true;
 }
 
 

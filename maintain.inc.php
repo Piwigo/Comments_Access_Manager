@@ -55,6 +55,12 @@ function plugin_activate()
     {
       upgradeCM_220_221();
     }
+
+    // upgrade from 2.2.1 to 2.2.2
+    if (version_compare($conf_CM[0], '2.2.2') < 0)
+    {
+      upgradeCM_221_222();
+    }
   }
   
   // Update plugin version number in #_config table and check consistency of #_plugins table

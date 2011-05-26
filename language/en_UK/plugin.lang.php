@@ -18,7 +18,10 @@ $lang['CM_Empty Author'] = 'Comments author nickname is mandatory !';
 // --------- Starting below: New or revised $lang ---- from version 2.2.1
 $lang['CM_Validation_For_Group'] = 'Allow comments without validation by an administrator';
 $lang['CM_ValidComm_Group'] = 'Select the group of users allowed to post comments without validation:';
-$lang['CM_CommentsForAll'] = '"Comments for all" option <b style="color:red;">enabled</b>';
-$lang['CM_CommentsForRegistered'] = '"Comments for all" option <b style="color:red;">disabled</b>';
 // --------- End: New or revised $lang ---- from version 2.2.1
+
+// --------- Starting below: New or revised $lang ---- from version 2.2.2
+$lang['CM_CommentsForAll'] = '"Comments for all" option is <b style="color:red;">enabled</b>';
+$lang['CM_CommentsForRegistered'] = '"Comments for all" option is <b style="color:red;">disabled</b>';
+// --------- End: New or revised $lang ---- from version 2.2.2
 ?>

@@ -19,7 +19,11 @@ $lang['CM_Empty Author'] = 'Le nom de l\'auteur du commentaire est obligatoire !
 $lang['CM_No_Anonymous_Comments'] = 'Pseudo obligatoire pour les non-inscrits';
 $lang['CM_Validation_For_Group'] = 'Autoriser les commentaires sans validation par un administrateur';
 $lang['CM_ValidComm_Group'] = 'Sélectionnez le groupe d\'utilisateurs autorisé à poster des commentaires sans validation :';
-$lang['CM_CommentsForAll'] = 'Option "Commentaires pour tous" <b style="color:red;">activé</b>';
-$lang['CM_CommentsForRegistered'] = 'Option "Commentaires pour tous" <b style="color:red;">désactivé</b>';
 // --------- End: New or revised $lang ---- from version 2.2.1
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.2.2
+$lang['CM_CommentsForAll'] = 'L\'option "Commentaires pour tous" est <b style="color:red;">activée</b>';
+$lang['CM_CommentsForRegistered'] = 'L\'option "Commentaires pour tous" est <b style="color:red;">désactivée</b>';
+// --------- End: New or revised $lang ---- from version 2.2.2
 ?>

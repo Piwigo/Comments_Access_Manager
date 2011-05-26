@@ -11,3 +11,8 @@ div.FieldTitle
   text-decoration: underline;
   font-weight:bolder;
 }
+
+div.cm_hide
+{
+  display: none;
+}

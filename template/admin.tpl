@@ -25,82 +25,154 @@ jQuery().ready(function()
   </p>
 
   <fieldset>
-    <fieldset>
-    <div class="FieldTitle">
-      {'CM_CommentsForAll'|@translate}
+
+  {if !$CM_CFA}
+    <div class="cm_hide">
+  {/if}
+      <fieldset>
+        <div class="FieldTitle">
+          {'CM_CommentsForAll'|@translate}
+        </div>
+
+        <br>
+
+        <ul>
+          <li>
+            <label class="cluetip" title="{'CM_commentTitle'|translate}|{'CM_commentTitle_d'|translate}">
+              {'CM_No_Anonymous_Comments'|@translate}
+            </label>
+
+          <br><br>
+
+            <input type="radio" value="false" {$CM_NO_COMMENT_ANO_FALSE} name="CM_No_Comment_Anonymous">
+              {'CM_Disable'|@translate}
+        
+          <br>
+
+            <input type="radio" value="true" {$CM_NO_COMMENT_ANO_TRUE} name="CM_No_Comment_Anonymous">
+              {'CM_Enable'|@translate}
+
+          <br><br>
+
+          </li>
+
+          <li>
+            <label class="cluetip" title="{'CM_ValidComm2Title'|translate}|{'CM_ValidComm2Title_d'|translate}">
+              {'CM_Validation_For_Group'|@translate}
+            </label>
+
+          <br><br>
+
+            <input type="radio" value="false" {$CM_GROUPVALID2_FALSE} name="CM_GroupValid2">
+              {'CM_Disable'|@translate}
+
+          <br>
+
+            <input type="radio" value="true" {$CM_GROUPVALID2_TRUE} name="CM_GroupValid2">
+              {'CM_Enable'|@translate}
+
+          <br><br>
+
+            <ul>
+              <li>
+                <label>
+                  {'CM_ValidComm_Group'|@translate}
+                </label>
+
+              <br><br>
+
+                  {html_options name="CM_ValidComm_Group2" options=$ValidComm_Group2.group_options selected=$ValidComm_Group2.group_selected}
+              </li>
+            </ul>
+
+          <br><br>
+
+          </li>
+        </ul>
+      </fieldset>
+  {if !$CM_CFA}
     </div>
-    <br>
-    <ul>
-      <li>
-        <label class="cluetip" title="{'CM_commentTitle'|translate}|{'CM_commentTitle_d'|translate}">
-          {'CM_No_Anonymous_Comments'|@translate}
-        </label>
-      <br><br>
-        <input type="radio" value="false" {$CM_NO_COMMENT_ANO_FALSE} name="CM_No_Comment_Anonymous">
-          {'CM_Disable'|@translate}
+  {/if}
+
+  {if $CM_CFA}
+    <div class="cm_hide">
+  {/if}
+      <fieldset>
+        <div class="FieldTitle">
+          {'CM_CommentsForRegistered'|@translate}
+        </div>
       <br>
-        <input type="radio" value="true" {$CM_NO_COMMENT_ANO_TRUE} name="CM_No_Comment_Anonymous">
-          {'CM_Enable'|@translate}
-      <br><br>
-      </li>
-    </ul>
-    </fieldset>
-    
-    <fieldset>
-    <div class="FieldTitle">
-      {'CM_CommentsForRegistered'|@translate}
+        <ul>
+          <li>
+            <label class="cluetip" title="{'CM_GroupCommTitle'|translate}|{'CM_GroupCommTitle_d'|translate}">
+              {'CM_Comments_For_Group'|@translate}
+            </label>
+
+            <br><br>
+
+            <input type="radio" value="false" {$CM_GROUPCOMM_FALSE} name="CM_GroupComm">
+              {'CM_Disable'|@translate}
+
+            <br>
+
+            <input type="radio" value="true" {$CM_GROUPCOMM_TRUE} name="CM_GroupComm">
+              {'CM_Enable'|@translate}
+
+            <br><br>
+
+            <ul>
+              <li>
+                <label>
+                  {'CM_AllowedComm_Group'|@translate}
+                </label>
+
+              <br><br>
+
+                  {html_options name="CM_AllowComm_Group" options=$AllowComm_Group.group_options selected=$AllowComm_Group.group_selected}
+              </li>
+            </ul>
+
+            <br><br>
+
+          </li>
+
+          <li>
+            <label class="cluetip" title="{'CM_ValidCommTitle'|translate}|{'CM_ValidCommTitle_d'|translate}">
+              {'CM_Validation_For_Group'|@translate}
+            </label>
+
+            <br><br>
+
+            <input type="radio" value="false" {$CM_GROUPVALID1_FALSE} name="CM_GroupValid1">
+              {'CM_Disable'|@translate}
+
+            <br>
+
+            <input type="radio" value="true" {$CM_GROUPVALID1_TRUE} name="CM_GroupValid1">
+              {'CM_Enable'|@translate}
+
+            <br><br>
+
+            <ul>
+              <li>
+                <label>
+                  {'CM_ValidComm_Group'|@translate}
+                </label>
+
+              <br><br>
+
+                  {html_options name="CM_ValidComm_Group1" options=$ValidComm_Group1.group_options selected=$ValidComm_Group1.group_selected}
+              </li>
+            </ul>
+
+            <br><br>
+
+          </li>
+        </ul>
+      </fieldset>
+  {if $CM_CFA}
     </div>
-    <br>
-    <ul>
-      <li>
-        <label class="cluetip" title="{'CM_GroupCommTitle'|translate}|{'CM_GroupCommTitle_d'|translate}">
-          {'CM_Comments_For_Group'|@translate}
-        </label>
-      <br><br>
-        <input type="radio" value="false" {$CM_GROUPCOMM_FALSE} name="CM_GroupComm">
-          {'CM_Disable'|@translate}
-      <br>
-        <input type="radio" value="true" {$CM_GROUPCOMM_TRUE} name="CM_GroupComm">
-          {'CM_Enable'|@translate}
-      <br><br>
-
-      <ul>
-        <li>
-          <label>
-            {'CM_AllowedComm_Group'|@translate}
-          </label>
-        <br><br>
-            {html_options name="CM_AllowComm_Group" options=$AllowComm_Group.group_options selected=$AllowComm_Group.group_selected}
-        </li>
-      </ul>
-      <br><br>
-      </li>
-
-      <li>
-        <label class="cluetip" title="{'CM_ValidCommTitle'|translate}|{'CM_ValidCommTitle_d'|translate}">
-          {'CM_Validation_For_Group'|@translate}
-        </label>
-      <br><br>
-        <input type="radio" value="false" {$CM_GROUPVALID_FALSE} name="CM_GroupValid">
-          {'CM_Disable'|@translate}
-      <br>
-        <input type="radio" value="true" {$CM_GROUPVALID_TRUE} name="CM_GroupValid">
-          {'CM_Enable'|@translate}
-      <br><br>
-
-      <ul>
-        <li>
-          <label>
-            {'CM_ValidComm_Group'|@translate}
-          </label>
-        <br><br>
-            {html_options name="CM_ValidComm_Group" options=$ValidComm_Group.group_options selected=$ValidComm_Group.group_selected}
-        </li>
-      </ul>
-      <br><br>
-      </li>
-    </ul>
-    </fieldset>
+  {/if}
   </fieldset>
 
   <p>

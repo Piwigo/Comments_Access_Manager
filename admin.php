@@ -32,7 +32,7 @@ $version = $plugin['version'];
 // +-----------------------------------------------------------------------+
 // *************************************************************************
 
-	if (isset($_POST['submit']) and isset($_POST['CM_No_Comment_Anonymous']) and isset($_POST['CM_GroupComm']) and isset($_POST['CM_GroupValid']))
+	if (isset($_POST['submit']) and isset($_POST['CM_No_Comment_Anonymous']) and isset($_POST['CM_GroupComm']) and isset($_POST['CM_GroupValid1']) and isset($_POST['CM_GroupValid2']))
   {
 
 		$newconf_CM = array(
@@ -40,8 +40,10 @@ $version = $plugin['version'];
       $_POST['CM_No_Comment_Anonymous'],
       $_POST['CM_GroupComm'],
       (isset($_POST['CM_AllowComm_Group'])?$_POST['CM_AllowComm_Group']:''),
-      $_POST['CM_GroupValid'],
-      (isset($_POST['CM_ValidComm_Group'])?$_POST['CM_ValidComm_Group']:''),
+      $_POST['CM_GroupValid1'],
+      (isset($_POST['CM_ValidComm_Group1'])?$_POST['CM_ValidComm_Group1']:''),
+      $_POST['CM_GroupValid2'],
+      (isset($_POST['CM_ValidComm_Group2'])?$_POST['CM_ValidComm_Group2']:''),
       );
 
     $conf['CommentsManager'] = serialize($newconf_CM);
@@ -57,7 +59,8 @@ $version = $plugin['version'];
   //Group setting
   $groups[-1] = '---------';
   $AllowComm = -1;
-  $ValidComm = -1;
+  $ValidComm1 = -1;
+  $ValidComm2 = -1;
 	
   //Check groups list in database 
   $query = '
@@ -81,7 +84,13 @@ ORDER BY name ASC
     //configuration value for users group allowed to post comments
     if (isset($conf_CM[5]) and $conf_CM[5] == $row['id'])
 		{
-	  	$ValidComm = $row['id'];
+	  	$ValidComm1 = $row['id'];
+		}
+
+    //configuration value for users group allowed to post comments
+    if (isset($conf_CM[7]) and $conf_CM[7] == $row['id'])
+		{
+	  	$ValidComm2 = $row['id'];
 		}
   }
 
@@ -95,10 +104,18 @@ ORDER BY name ASC
   	);
   //Template initialization for validated group for comments
   $template->assign(
-    'ValidComm_Group',
+    'ValidComm_Group1',
 		array(
       'group_options'=> $groups,
-      'group_selected' => $ValidComm
+      'group_selected' => $ValidComm1
+			)
+  	);
+  //Template initialization for validated group for comments
+  $template->assign(
+    'ValidComm_Group2',
+		array(
+      'group_options'=> $groups,
+      'group_selected' => $ValidComm2
 			)
   	);
 
@@ -110,15 +127,19 @@ ORDER BY name ASC
   $template->assign(
     array(
     'CM_PATH'                       => CM_PATH,
+    'CM_CFA'                        => $conf['comments_forall'],
     'CM_VERSION'                    => $conf_CM[0],
 		'CM_NO_COMMENT_ANO_TRUE'        => $conf_CM[1]=='true' ?  'checked="checked"' : '' ,
 		'CM_NO_COMMENT_ANO_FALSE'       => $conf_CM[1]=='false' ?  'checked="checked"' : '' ,
     'CM_GROUPCOMM_TRUE'             => $conf_CM[2]=='true' ?  'checked="checked"' : '' ,
     'CM_GROUPCOMM_FALSE'            => $conf_CM[2]=='false' ?  'checked="checked"' : '' ,
     'CM_ALLOWCOMM_GROUP'            => $conf_CM[3],
-    'CM_GROUPVALID_TRUE'            => $conf_CM[4]=='true' ?  'checked="checked"' : '' ,
-    'CM_GROUPVALID_FALSE'           => $conf_CM[4]=='false' ?  'checked="checked"' : '' ,
-    'CM_VALIDCOMM_GROUP'            => $conf_CM[5],
+    'CM_GROUPVALID1_TRUE'           => $conf_CM[4]=='true' ?  'checked="checked"' : '' ,
+    'CM_GROUPVALID1_FALSE'          => $conf_CM[4]=='false' ?  'checked="checked"' : '' ,
+    'CM_VALIDCOMM1_GROUP'           => $conf_CM[5],
+    'CM_GROUPVALID2_TRUE'           => $conf_CM[6]=='true' ?  'checked="checked"' : '' ,
+    'CM_GROUPVALID2_FALSE'          => $conf_CM[6]=='false' ?  'checked="checked"' : '' ,
+    'CM_VALIDCOMM2_GROUP'           => $conf_CM[7],
     )
   );
 
