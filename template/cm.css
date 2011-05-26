@@ -3,3 +3,11 @@ label.cluetip
 {
   font-weight:bold;
 }
+
+/* CM instructions */
+div.FieldTitle
+{
+  text-align:center;
+  text-decoration: underline;
+  font-weight:bolder;
+}

@@ -8,7 +8,7 @@ jQuery().ready(function()
 {ldelim}
   jQuery('.cluetip').cluetip(
   {ldelim}
-    width: 550,
+    width: 500,
     splitTitle: '|'
   {rdelim});
 {rdelim});
@@ -25,6 +25,11 @@ jQuery().ready(function()
   </p>
 
   <fieldset>
+    <fieldset>
+    <div class="FieldTitle">
+      {'CM_CommentsForAll'|@translate}
+    </div>
+    <br>
     <ul>
       <li>
         <label class="cluetip" title="{'CM_commentTitle'|translate}|{'CM_commentTitle_d'|translate}">
@@ -38,7 +43,15 @@ jQuery().ready(function()
           {'CM_Enable'|@translate}
       <br><br>
       </li>
-
+    </ul>
+    </fieldset>
+    
+    <fieldset>
+    <div class="FieldTitle">
+      {'CM_CommentsForRegistered'|@translate}
+    </div>
+    <br>
+    <ul>
       <li>
         <label class="cluetip" title="{'CM_GroupCommTitle'|translate}|{'CM_GroupCommTitle_d'|translate}">
           {'CM_Comments_For_Group'|@translate}
@@ -62,7 +75,32 @@ jQuery().ready(function()
       </ul>
       <br><br>
       </li>
+
+      <li>
+        <label class="cluetip" title="{'CM_ValidCommTitle'|translate}|{'CM_ValidCommTitle_d'|translate}">
+          {'CM_Validation_For_Group'|@translate}
+        </label>
+      <br><br>
+        <input type="radio" value="false" {$CM_GROUPVALID_FALSE} name="CM_GroupValid">
+          {'CM_Disable'|@translate}
+      <br>
+        <input type="radio" value="true" {$CM_GROUPVALID_TRUE} name="CM_GroupValid">
+          {'CM_Enable'|@translate}
+      <br><br>
+
+      <ul>
+        <li>
+          <label>
+            {'CM_ValidComm_Group'|@translate}
+          </label>
+        <br><br>
+            {html_options name="CM_ValidComm_Group" options=$ValidComm_Group.group_options selected=$ValidComm_Group.group_selected}
+        </li>
+      </ul>
+      <br><br>
+      </li>
     </ul>
+    </fieldset>
   </fieldset>
 
   <p>

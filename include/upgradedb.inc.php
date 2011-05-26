@@ -73,4 +73,31 @@ LIMIT 1
     pwg_query($query);
   }
 }
+
+
+/* upgrade from 2.2.0 to 2.2.1 */
+/* *************************** */
+function upgradeCM_220_221()
+{
+  global $conf;
+
+  // Upgrading options
+  $query = '
+SELECT value
+  FROM '.CONFIG_TABLE.'
+WHERE param = "CommentsManager"
+;';
+
+  $result = pwg_query($query);
+  $conf_CM = pwg_db_fetch_assoc($result);
+    
+  $Newconf_CM = unserialize($conf_CM['value']);
+  
+  $Newconf_CM[4] = 'false';
+  $Newconf_CM[5] = '-1';
+  
+  $update_conf = serialize($Newconf_CM);
+
+  conf_update_param('CommentsManager', pwg_db_real_escape_string($update_conf));
+}
 ?>

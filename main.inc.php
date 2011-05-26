@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Comments Access Manager
-Version: 2.2.0
+Version: 2.2.1
 Description: Gérer l'accès aux commentaites - Manage comments access
 Plugin URI: http://piwigo.org/ext/extension_view.php?eid=
 Author: Eric
@@ -16,10 +16,6 @@ if (!defined('CM_PATH')) define('CM_PATH' , PHPWG_PLUGINS_PATH.basename(dirname(
 global $conf;
 
 include_once (CM_PATH.'include/functions.inc.php');
-
-load_language('plugin.lang', CM_PATH);
-$conf_CM = unserialize($conf['CommentsManager']);
-
 
 // Plugin administration panel
 add_event_handler('get_admin_plugin_menu_links', 'CM_admin_menu');

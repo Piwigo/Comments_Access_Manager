@@ -51,15 +51,38 @@ function CM_CheckCommentAuthor($comment_action, $comm)
     array_push($infos, l10n('CM_Empty Author'));
   }
 
-
-// Do not allow comments if user is not in an allowed group
-  if (isset($conf_CM[2]) and $conf_CM[2] == 'true' and !$conf['comments_forall'] and !is_admin())
+// Rules on comments NOT for all
+  if (!$conf['comments_forall'] and !is_admin())
   {
-    if (!CM_CheckAuthor($comm['author']))
+    if ((isset($conf_CM[2]) and $conf_CM[2] == 'true') and (isset($conf_CM[4]) and $conf_CM[4] == 'false') and !CM_CheckAuthor($comm['author'])) // Comments authorized group set - Auto validation group unset 
     {
-      $comment_action = 'reject';
-
+      $comment_action = 'reject'; // Comment rejected if author is not in the allowed group
       array_push($infos, l10n('CM_Not_Allowed_Author'));
+    }
+    elseif ((isset($conf_CM[2]) and $conf_CM[2] == 'false') and (isset($conf_CM[4]) and $conf_CM[4] == 'true') and $conf['comments_validation']) // Comments authorized group unset - Auto validation group set
+    {
+      if (CM_CheckValidGroup($comm['author']))
+      {
+        $comment_action = 'validate'; // Comment is validated if author is not in the validated group
+      }
+      else
+      {
+        $comment_action = 'moderate'; // Comment needs moderation if author is not in the validated group
+      }
+    }
+    elseif ((isset($conf_CM[2]) and $conf_CM[2] == 'true') and (isset($conf_CM[4]) and $conf_CM[4] == 'true') and $conf['comments_validation']) // Comments authorized group set - Auto validation group set
+    {
+      if (!CM_CheckAuthor($comm['author']))
+      {
+        $comment_action = 'reject'; // Comment rejected if author is not in the allowed group
+        array_push($infos, l10n('CM_Not_Allowed_Author'));
+      }
+      elseif (CM_CheckValidGroup($comm['author']))
+      {
+        $comment_action = 'validate'; // Comment is validated if author is not in the validated group
+      }
+      else
+        $comment_action = 'moderate'; // Comment needs moderation if author is not in the validated group
     }
   }
 
@@ -94,6 +117,48 @@ FROM '.USERS_TABLE.' AS u
     ON u.id = ug.user_id
 WHERE u.username LIKE "'.$author.'"
   AND ug.group_id = '.$conf_CM[3].'
+;';
+
+    $count = pwg_db_num_rows(pwg_query($query));
+
+    if (is_null($count) or $count == 0)
+    {
+      return false;
+    }
+    else
+      return true;
+  }
+}
+
+
+/**
+ * Checks if comment's author name is in the admin's pre-validated group
+ * avoid admins to validate comments for the members of this group
+ * 
+ * @author   : author's name
+ * 
+ * @returns  : Boolean (true if user's comment doesn't need validation / false if user's comment is moderated)
+ * 
+ */
+function CM_CheckValidGroup($author)
+{
+  global $conf;
+  
+	// Get CM configuration
+  $conf_CM = unserialize($conf['CommentsManager']);
+  
+  if (isset($conf_CM[5]) and $conf_CM[5] <> -1)
+  {
+    $query = '
+SELECT u.id,
+       u.username,
+       ug.user_id,
+       ug.group_id
+FROM '.USERS_TABLE.' AS u
+  INNER JOIN '.USER_GROUP_TABLE.' AS ug
+    ON u.id = ug.user_id
+WHERE u.username LIKE "'.$author.'"
+  AND ug.group_id = '.$conf_CM[5].'
 ;';
 
     $count = pwg_db_num_rows(pwg_query($query));

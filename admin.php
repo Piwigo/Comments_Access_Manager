@@ -32,7 +32,7 @@ $version = $plugin['version'];
 // +-----------------------------------------------------------------------+
 // *************************************************************************
 
-	if (isset($_POST['submit']) and isset($_POST['CM_No_Comment_Anonymous']) and isset($_POST['CM_GroupComm']))
+	if (isset($_POST['submit']) and isset($_POST['CM_No_Comment_Anonymous']) and isset($_POST['CM_GroupComm']) and isset($_POST['CM_GroupValid']))
   {
 
 		$newconf_CM = array(
@@ -40,6 +40,8 @@ $version = $plugin['version'];
       $_POST['CM_No_Comment_Anonymous'],
       $_POST['CM_GroupComm'],
       (isset($_POST['CM_AllowComm_Group'])?$_POST['CM_AllowComm_Group']:''),
+      $_POST['CM_GroupValid'],
+      (isset($_POST['CM_ValidComm_Group'])?$_POST['CM_ValidComm_Group']:''),
       );
 
     $conf['CommentsManager'] = serialize($newconf_CM);
@@ -55,6 +57,7 @@ $version = $plugin['version'];
   //Group setting
   $groups[-1] = '---------';
   $AllowComm = -1;
+  $ValidComm = -1;
 	
   //Check groups list in database 
   $query = '
@@ -74,6 +77,12 @@ ORDER BY name ASC
 		{
 	  	$AllowComm = $row['id'];
 		}
+
+    //configuration value for users group allowed to post comments
+    if (isset($conf_CM[5]) and $conf_CM[5] == $row['id'])
+		{
+	  	$ValidComm = $row['id'];
+		}
   }
 
   //Template initialization for allowed group for comments
@@ -82,6 +91,14 @@ ORDER BY name ASC
 		array(
       'group_options'=> $groups,
       'group_selected' => $AllowComm
+			)
+  	);
+  //Template initialization for validated group for comments
+  $template->assign(
+    'ValidComm_Group',
+		array(
+      'group_options'=> $groups,
+      'group_selected' => $ValidComm
 			)
   	);
 
@@ -99,6 +116,9 @@ ORDER BY name ASC
     'CM_GROUPCOMM_TRUE'             => $conf_CM[2]=='true' ?  'checked="checked"' : '' ,
     'CM_GROUPCOMM_FALSE'            => $conf_CM[2]=='false' ?  'checked="checked"' : '' ,
     'CM_ALLOWCOMM_GROUP'            => $conf_CM[3],
+    'CM_GROUPVALID_TRUE'            => $conf_CM[4]=='true' ?  'checked="checked"' : '' ,
+    'CM_GROUPVALID_FALSE'           => $conf_CM[4]=='false' ?  'checked="checked"' : '' ,
+    'CM_VALIDCOMM_GROUP'            => $conf_CM[5],
     )
   );
 

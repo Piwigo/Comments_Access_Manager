@@ -1,4 +1,8 @@
 Plugin Name: Comments Access Manager
 ** Change log **
 
--- 2011-05-23 : 2.2.0 - Initial Release
+-- 2011-05-23
+      2.2.0 - Initial Release
+
+-- 2011-05-26
+      2.2.1 - Add new feature : Users in a specified group can post comments without admin validation when "Comments for all" is enabled and admin validation is enabled.

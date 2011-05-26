@@ -13,4 +13,12 @@ $lang['CM_Support_txt'] = 'The official support on this plugin is only on these 
 <a href="http://piwigo.org/forum/viewtopic.php?id=17577" onclick="window.open(this.href);return false;">English forum - http://piwigo.org/forum/viewtopic.php?id=17577</a><br><br>
 Also available, the project\'s bugtracker: <a href="http://piwigo.org/bugs/" onclick="window.open(this.href);return false;">http://piwigo.org/bugs/</a>';
 $lang['CM_Empty Author'] = 'Comments author nickname is mandatory !';
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.2.1
+$lang['CM_Validation_For_Group'] = 'Allow comments without validation by an administrator';
+$lang['CM_ValidComm_Group'] = 'Select the group of users allowed to post comments without validation:';
+$lang['CM_CommentsForAll'] = '"Comments for all" option <b style="color:red;">enabled</b>';
+$lang['CM_CommentsForRegistered'] = '"Comments for all" option <b style="color:red;">disabled</b>';
+// --------- End: New or revised $lang ---- from version 2.2.1
 ?>

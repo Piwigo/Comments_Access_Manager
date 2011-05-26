@@ -15,7 +15,7 @@ function plugin_install()
   $plugin =  CM_Infos(CM_PATH);
   $version = $plugin['version'];
 	
-  $default = array($version,'false','false',-1);
+  $default = array($version,'false','false',-1,'false',-1);
 
 	$query = '
 SELECT param
@@ -45,10 +45,22 @@ function plugin_activate()
   
   include_once (CM_PATH.'include/upgradedb.inc.php');
 
+  // Database upgrade process
+  if (isset($conf['CommentsManager']))
+  {
+    $conf_CM = unserialize($conf['CommentsManager']);
+    
+    // upgrade from 2.2.0 to 2.2.1
+    if (version_compare($conf_CM[0], '2.2.1') < 0)
+    {
+      upgradeCM_220_221();
+    }
+  }
+  
   // Update plugin version number in #_config table and check consistency of #_plugins table
   CM_version_update();
 
-  load_conf_from_db('param like \'UserAdvManager\\_%\'');
+  load_conf_from_db('param like \'CommentsManager\'');
 }
 
 
