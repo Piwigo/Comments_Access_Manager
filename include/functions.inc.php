@@ -27,16 +27,14 @@ function CM_admin_menu($menu)
 
 
 /**
- * checks if author is mandatory and set on comments post when comments for all is set
- * 
- * cheks if author is in an allowed group to post comment when comments for all is not set
+ * Check comment rules set in plugin before accepting it
  *
  * @param : comment action, comment
  * 
  * @return : comment action
  * 
  */
-function CM_CheckCommentAuthor($comment_action, $comm)
+function CM_CheckComment($comment_action, $comm)
 {
   load_language('plugin.lang', CM_PATH);
   global $infos, $conf, $user;
@@ -52,7 +50,7 @@ function CM_CheckCommentAuthor($comment_action, $comm)
 
       array_push($infos, l10n('CM_Empty Author'));
     }
-    elseif ((isset($conf_CM[6]) and $conf_CM[6] == 'true') and $comm['author'] != 'guest')
+    elseif ((isset($conf_CM[6]) and $conf_CM[6] == 'true') and !$comm['author'] == 'guest')
     {
       if (CM_CheckValidGroup($comm['author']) or is_admin())
       {
