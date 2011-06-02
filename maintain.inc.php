@@ -15,7 +15,7 @@ function plugin_install()
   $plugin =  CM_Infos(CM_PATH);
   $version = $plugin['version'];
 	
-  $default = array($version,'false','false',-1,'false',-1);
+  $default = array($version,'false','false',-1,'false',-1,'false',-1);
 
 	$query = '
 SELECT param

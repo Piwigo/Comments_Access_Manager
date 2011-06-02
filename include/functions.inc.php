@@ -50,7 +50,8 @@ function CM_CheckComment($comment_action, $comm)
 
       array_push($infos, l10n('CM_Empty Author'));
     }
-    elseif ((isset($conf_CM[6]) and $conf_CM[6] == 'true') and !$comm['author'] == 'guest')
+    
+    if ((isset($conf_CM[6]) and $conf_CM[6] == 'true') and !is_a_guest())
     {
       if (CM_CheckValidGroup($comm['author']) or is_admin())
       {
