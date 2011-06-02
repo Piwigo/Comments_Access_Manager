@@ -51,7 +51,7 @@ function CM_CheckComment($comment_action, $comm)
       array_push($infos, l10n('CM_Empty Author'));
     }
     
-    if ((isset($conf_CM[6]) and $conf_CM[6] == 'true') and !is_a_guest())
+    if ((isset($conf_CM[6]) and $conf_CM[6] == 'true') and !is_a_guest() and $conf['comments_validation'])
     {
       if (CM_CheckValidGroup($comm['author']) or is_admin())
       {
@@ -74,7 +74,7 @@ function CM_CheckComment($comment_action, $comm)
     }
     elseif ((isset($conf_CM[2]) and $conf_CM[2] == 'false') and (isset($conf_CM[4]) and $conf_CM[4] == 'true') and $conf['comments_validation']) // Comments authorized group unset - Auto validation group set
     {
-      if (CM_CheckValidGroup($comm['author']))
+      if (CM_CheckValidGroup($comm['author']) and $conf['comments_validation'])
       {
         $comment_action = 'validate'; // Comment is validated if author is not in the validated group
       }
@@ -90,7 +90,7 @@ function CM_CheckComment($comment_action, $comm)
         $comment_action = 'reject'; // Comment rejected if author is not in the allowed group
         array_push($infos, l10n('CM_Not_Allowed_Author'));
       }
-      elseif (CM_CheckValidGroup($comm['author']))
+      elseif (CM_CheckValidGroup($comm['author']) and $conf['comments_validation'])
       {
         $comment_action = 'validate'; // Comment is validated if author is not in the validated group
       }

@@ -11,3 +11,5 @@ Plugin Name: Comments Access Manager
       
       2.2.4 - Bug fixed : Installation from scratch error.
               Bug fixed : If "Comments for all" is disabled and a specified group of users can post comments without admin validation, the administrator had to still validate them.
+      
+      2.2.5 - Bug fixed : Validation was always need even if "Validation" option was unset.
