@@ -128,6 +128,7 @@ ORDER BY name ASC
     array(
     'CM_PATH'                       => CM_PATH,
     'CM_CFA'                        => $conf['comments_forall'],
+    'CM_VALIDATION'                 => $conf['comments_validation'],
     'CM_VERSION'                    => $conf_CM[0],
 		'CM_NO_COMMENT_ANO_TRUE'        => $conf_CM[1]=='true' ?  'checked="checked"' : '' ,
 		'CM_NO_COMMENT_ANO_FALSE'       => $conf_CM[1]=='false' ?  'checked="checked"' : '' ,

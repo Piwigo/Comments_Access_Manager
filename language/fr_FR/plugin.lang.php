@@ -26,4 +26,9 @@ $lang['CM_ValidComm_Group'] = 'Sélectionnez le groupe d\'utilisateurs autorisé
 $lang['CM_CommentsForAll'] = 'L\'option "Commentaires pour tous" est <b style="color:red;">activée</b>';
 $lang['CM_CommentsForRegistered'] = 'L\'option "Commentaires pour tous" est <b style="color:red;">désactivée</b>';
 // --------- End: New or revised $lang ---- from version 2.2.2
+
+// --------- Starting below: New or revised $lang ---- from version 2.2.6
+$lang['CM_CommentsValidationOn'] = 'L\'option "Validation" pour les commentaires est <b style="color:red;">activée</b>';
+$lang['CM_CommentsValidationOff'] = 'L\'option "Validation" pour les commentaires est <b style="color:red;">désactivée</b>';
+// --------- End: New or revised $lang ---- from version 2.2.6
 ?>

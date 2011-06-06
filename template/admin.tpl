@@ -52,9 +52,24 @@ jQuery().ready(function()
             <input type="radio" value="true" {$CM_NO_COMMENT_ANO_TRUE} name="CM_No_Comment_Anonymous">
               {'CM_Enable'|@translate}
 
-          <br><br>
-
           </li>
+
+        {if !$CM_VALIDATION}
+          <div class="FieldTitle">
+            <p class="cluetip" title="{'CM_CommentsValidationOffTitle'|translate}|{'CM_CommentsValidationOffTitle_d'|translate}">
+              {'CM_CommentsValidationOff'|@translate}
+            </p>
+          </div>
+          <div class="cm_hide">
+        {/if}
+
+        <br><br>
+
+          <div class="FieldTitle">
+              {'CM_CommentsValidationOn'|@translate}
+          </div>
+
+        <br><br>
 
           <li>
             <label class="cluetip" title="{'CM_ValidComm2Title'|translate}|{'CM_ValidComm2Title_d'|translate}">
@@ -88,6 +103,9 @@ jQuery().ready(function()
           <br><br>
 
           </li>
+      {if !$CM_VALIDATION}
+        </div>
+      {/if}
         </ul>
       </fieldset>
   {if !$CM_CFA}
@@ -136,6 +154,23 @@ jQuery().ready(function()
 
           </li>
 
+        {if !$CM_VALIDATION}
+          <div class="FieldTitle">
+            <p class="cluetip" title="{'CM_CommentsValidationOffTitle'|translate}|{'CM_CommentsValidationOffTitle_d'|translate}">
+              {'CM_CommentsValidationOff'|@translate}
+            </p>
+          </div>
+          <div class="cm_hide">
+        {/if}
+
+        <br><br>
+
+          <div class="FieldTitle">
+              {'CM_CommentsValidationOn'|@translate}
+          </div>
+
+        <br><br>
+
           <li>
             <label class="cluetip" title="{'CM_ValidCommTitle'|translate}|{'CM_ValidCommTitle_d'|translate}">
               {'CM_Validation_For_Group'|@translate}
@@ -168,6 +203,9 @@ jQuery().ready(function()
             <br><br>
 
           </li>
+      {if !$CM_VALIDATION}
+        </div>
+      {/if}
         </ul>
       </fieldset>
   {if $CM_CFA}

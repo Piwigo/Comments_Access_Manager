@@ -20,8 +20,15 @@ $lang['CM_Validation_For_Group'] = 'Allow comments without validation by an admi
 $lang['CM_ValidComm_Group'] = 'Select the group of users allowed to post comments without validation:';
 // --------- End: New or revised $lang ---- from version 2.2.1
 
+
 // --------- Starting below: New or revised $lang ---- from version 2.2.2
 $lang['CM_CommentsForAll'] = '"Comments for all" option is <b style="color:red;">enabled</b>';
 $lang['CM_CommentsForRegistered'] = '"Comments for all" option is <b style="color:red;">disabled</b>';
 // --------- End: New or revised $lang ---- from version 2.2.2
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.2.6
+$lang['CM_CommentsValidationOn'] = '"Validation" for comments is <b style="color:red;">enabled</b>';
+$lang['CM_CommentsValidationOff'] = '"Validation" for comments is <b style="color:red;">disabled</b>';
+// --------- End: New or revised $lang ---- from version 2.2.6
 ?>
