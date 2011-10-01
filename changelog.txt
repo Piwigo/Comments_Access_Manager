@@ -16,3 +16,6 @@ Plugin Name: Comments Access Manager
 
       2.2.6 - Bug fixed related with piwigo's bug 2323 : Validation was still needed on comments modification
               Admin panel refactory 
+
+      2.3.0 - Compliance with Piwigo 2.3
+              Editing language files for better compatibility with the new online translation tool 
