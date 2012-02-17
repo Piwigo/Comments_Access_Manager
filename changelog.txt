@@ -19,3 +19,7 @@ Plugin Name: Comments Access Manager
 
       2.3.0 - Compliance with Piwigo 2.3
               Editing language files for better compatibility with the new online translation tool 
+
+      2.3.1 - Adding es_ES translation (thx to jpr928)
+              Adding lv_LV translation (thx to Aivars Baldone)
+              Translation keys improvement : 1 key deleted
