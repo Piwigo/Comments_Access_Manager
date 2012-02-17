@@ -72,7 +72,7 @@ jQuery().ready(function()
         <br><br>
 
           <li>
-            <label class="cluetip" title="{'CM_ValidComm2Title'|translate}|{'CM_ValidComm2Title_d'|translate}">
+            <label class="cluetip" title="{'CM_ValidCommTitle'|translate}|{'CM_ValidComm2Title_d'|translate}">
               {'CM_Validation_For_Group'|@translate}
             </label>
 
