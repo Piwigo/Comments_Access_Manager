@@ -26,4 +26,9 @@ $lang['CM_GroupCommTitle'] = 'Csoport tagok hozzászólásainak engedélyezése'
 $lang['CM_GroupCommTitle_d'] = 'Amennyiben a galéria úgy van beállítva, hogy ne szólhasson hozzá mindenki, ezzel a beállítással engedélyezheti bizonyos csoport tagjainak a hozzászólást.
 <br><br>
 Alapesetben a <b>&quot;Bárki hozzászólhat&quot;</b> opció inaktív, csak regisztrált felhasználók szólhatnak hozzá. Ezt a viselkedést letilthatjuk ezzel a funkcióval, így regisztrált felhasználók és egy bizonyos csoport tagjainak engedélyezi a hozzászólást.';
+$lang['CM_CommentsValidationOffTitle'] = '&quot;Engedélyezés szükséges&quot; opció kikapcsolva';
+$lang['CM_CommentsValidationOffTitle_d'] = 'További beállítások eléréséhez engedélyezze ezt az opciót.';
+$lang['CM_ValidComm2Title_d'] = 'Alapesetben, ha a <b>&quot;Bárki hozzászólhat&quot;</b> és az <b>&quot;Ellenőrzés szükséges&quot;</b> opciók be vannak kapcsolva, a regisztrált felhasználók hozzászólásai csak a rendszergazda jóváhagyása után válnak láthatóvá. Ezzel a beállítással lehetővé teheti, hogy egy bizonyos csopothoz tartozó felhasználók hozzászólásai ellenőrzés nélkül jelenhessenek meg. ';
+$lang['CM_ValidCommTitle'] = 'Hozzászólások engedélyezése rendszergazda ellenőrzése nélkül';
+$lang['CM_ValidCommTitle_d'] = 'Alapesetben, ha a <b>&quot;Bárki hozzászólhat&quot;</b> opció inaktív, valamint az <b>&quot;Ellenőrzés szükséges&quot;</b> opció be van kapcsolva, a regisztrált felhasználók hozzászólásai csak a rendszergazda jóváhagyása után válnak láthatóvá. Ezzel a beállítással lehetővé teheti, hogy egy bizonyos csopothoz tartozó felhasználók hozzászólásai ellenőrzés nélkül jelenhessenek meg. ';
 ?>

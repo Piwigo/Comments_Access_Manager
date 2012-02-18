@@ -20,7 +20,7 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['CM_AllowedComm_Group'] = 'Válassza ki mely csoporthoz tartozó felhasználók írhatnak hozzászólásokat';
+$lang['CM_AllowedComm_Group'] = 'Válassza ki mely csoporthoz tartozó felhasználók írhatnak hozzászólásokat:';
 $lang['CM_CommentsForAll'] = '"Bárki hozzászólhat" opció <b style="color:red;">bekapcsolva</b>';
 $lang['CM_CommentsForRegistered'] = '"Bárki hozzászólhat" opció <b style="color:red;">kikapcsolva</b>';
 $lang['CM_CommentsValidationOff'] = '"Engedélyezés szükséges" opció <b style="color:red;">kikapcsolva</b>';
@@ -34,4 +34,9 @@ $lang['CM_save_config'] = 'Beállítások mentése sikeres!';
 $lang['CM_submit'] = 'Beállítások mentése';
 $lang['CM_SubTitle'] = 'Bővítmény konfiguráció';
 $lang['CM_Title'] = 'Comments Access Manager - Verzió : ';
+$lang['CM_Empty Author'] = 'A hozzászóláshoz kötelező a felhasználónév használata!';
+$lang['CM_Support_txt'] = 'A bővítmény hivatalos támogatását az alábbi Piwigo fórum témában találja:<br>
+<a href="http://piwigo.org/forum/viewtopic.php?id=17577" onclick="window.open(this.href);return false;">Angol fórum - http://piwigo.org/forum/viewtopic.php?id=17577</a><br><br>A projekt hibakövető itt található: <a href="http://piwigo.org/bugs/" onclick="window.open(this.href);return false;">http://piwigo.org/bugs/</a>';
+$lang['CM_Validation_For_Group'] = 'Hozzászólások engedélyezése rendszergazda ellenőrzése nélkül';
+$lang['CM_ValidComm_Group'] = 'Válassza ki mely csoporthoz tartozó felhasználók írhatnak hozzászólásokat a rendszergazda ellenőrzése nélkül:';
 ?>
