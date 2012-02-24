@@ -23,3 +23,5 @@ Plugin Name: Comments Access Manager
       2.3.1 - Adding es_ES translation (thx to jpr928)
               Adding lv_LV translation (thx to Aivars Baldone)
               Translation keys improvement : 1 key deleted
+
+      2.3.2 - Adding hu_HU translation (thanks to samli)
