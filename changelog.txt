@@ -25,3 +25,5 @@ Plugin Name: Comments Access Manager
               Translation keys improvement : 1 key deleted
 
       2.3.2 - Adding hu_HU translation (thanks to samli)
+
+      2.3.3 - Update it_IT, thanks to : Gdvpixel
