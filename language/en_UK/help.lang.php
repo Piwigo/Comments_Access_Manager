@@ -15,10 +15,10 @@ $lang['CM_ValidCommTitle'] = 'Allow comments without validation by an administra
 // --------- Starting below: New or revised $lang ---- from version 2.2.2
 $lang['CM_ValidCommTitle_d'] = 'This option lets you specify a group of users whose comments will be provided without validation by the administrator when the gallery is configured to <u>not allow comments to all</u> and that the validation of comments by an administrator is required.
 <br><br>
-By default, when <b>&quot;comments all&quot;</b> is disabled and the validation of comments is enabled, the comments of all registered users are subject to validation by an administrator before being visible on the gallery. With this option, you can allow members of a group of your choice to post comments without such prior approval is required.';
+By default, when <b>&quot;comments for all&quot;</b> is disabled and the validation of comments is enabled, the comments of all registered users are subject to validation by an administrator before being visible on the gallery. With this option, you can allow members of a group of your choice to post comments without such prior approval is required.';
 $lang['CM_ValidComm2Title_d'] = 'This option lets you specify a group of users whose comments will be provided without validation by the administrator when the gallery is configured to <u>allow comments to all</u> and that the validation of comments by an administrator is required.
 <br><br>
-By default, when <b>&quot;comments all&quot;</b> and the validation of comments are enabled, the comments of all registered users are subject to validation by an administrator before being visible on the gallery. With this option, you can allow members of a group of your choice to post comments without such prior approval is required.';
+By default, when <b>&quot;comments for all&quot;</b> and the validation of comments are enabled, the comments of all registered users are subject to validation by an administrator before being visible on the gallery. With this option, you can allow members of a group of your choice to post comments without such prior approval is required.';
 // --------- End: New or revised $lang ---- from version 2.2.2
 
 
