@@ -27,3 +27,6 @@ Plugin Name: Comments Access Manager
       2.3.2 - Adding hu_HU translation (thanks to samli)
 
       2.3.3 - Update it_IT, thanks to : Gdvpixel
+
+      2.3.4 - Add cs_CZ - Česky – Czech - Thanks to webprostor
+              Add uk_UA - Ukrainian - thanks to : animan
