@@ -33,3 +33,5 @@ Plugin Name: Comments Access Manager
 
       2.3.5 - Update uk_UA, thanks to : animan
               Update de_DE
+
+      2.3.6 - Add pl_PL - Polski - Polish - Thanks to kuba
