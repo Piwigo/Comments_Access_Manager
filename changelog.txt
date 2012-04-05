@@ -35,3 +35,5 @@ Plugin Name: Comments Access Manager
               Update de_DE
 
       2.3.6 - Add pl_PL - Polski - Polish - Thanks to kuba
+
+      2.3.7 - Add sk_SK - český - Czech - Thanks to : dodo
