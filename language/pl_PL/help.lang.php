@@ -29,4 +29,10 @@ $lang['CM_GroupCommTitle'] = 'Pozawala na komentowanie grupie użytkowników';
 $lang['CM_ValidCommTitle'] = 'Pozwala na komentowanie bez zatwierdzenia administratora';
 $lang['CM_commentTitle_d'] = 'Jeśli <b>&quot;Komentarze dla wszystkich&quot;</b> są aktywne (zezwolenie na umieszczanie komentarzy dla niezarejestrowanych użytkowników), ta opcja wymusza na niezarejestrowanych użytkownikach wpisywanie nicka w celu zatwierdzenia komentarza';
 $lang['CM_commentTitle'] = 'Obowiązujący nick dla komentarzy gości';
+$lang['CM_ValidComm2Title_d'] = 'Ta opcja pozwala na określenie grupy, która będzie mogła umieszczać komentarze bez potrzeby zatwierdzania ich przez administratora gdy włączona jest opcja zatwierdzania przez administratora oraz gdy galeria skonfigurowana jest na <u>Pozwól wszystkim na komentarze</u>
+<br><br>
+Domyślnie gdy opcja <u>Komentarze dla wszystkich</u> jest włączona i włączona jest konieczność zatwierdzania komentarzy przez administratora, wszystkie komentarze zanim pojawią się w galerii muszą zostać zatwierdzone przez administratora. Jeśli uruchomisz tą opcję pozwolisz wybranej grupie na umieszczanie komentarzy bez potrzeby zatwierdzania ich.';
+$lang['CM_ValidCommTitle_d'] = 'Ta opcja pozwala na określenie która grupa będzie mogła umieszczać komentarze bez zatwierdzania ich przez administratora, wtedy gdy galeria będzie skonfigurowana aby <u>nie pozwalać na komentarze dla wszystkich</u> oraz gdy potrzebne będzie zatwierdzenie przez administratora.
+<br><br>
+Domyślnie gdy opcja <u>Komentarze dla wszystkich</u> jest wyłączona i włączona jest konieczność zatwierdzania komentarzy przez administratora, wszystkie komentarze zanim pojawią się w galerii muszą zostać zatwierdzone przez administratora. Jeśli uruchomisz tą opcję pozwolisz wybranej grupie na umieszczanie komentarzy bez potrzeby zatwierdzania ich.';
 ?>
