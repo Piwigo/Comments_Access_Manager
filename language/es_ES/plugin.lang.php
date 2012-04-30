@@ -16,4 +16,6 @@ $lang['CM_CommentsForAll'] = 'La opcion "Comentarios para todos" esta<b style="c
 $lang['CM_CommentsForRegistered'] = 'La opcion "Comentarios para todos" esta <b style="color:red;">desactivada</b>';
 $lang['CM_CommentsValidationOn'] = 'La opción "validación" de los comentarios esta<b style="color:red;">activada</b>';
 $lang['CM_CommentsValidationOff'] = 'La opción "validación" de los comentarios esta<b style="color:red;">desactivada</b>';
+$lang['CM_Support_txt'] = 'Soporte oficial de estos plugins o extensiones es solamente a través del foro de Piwigo <br>
+<a href="http://piwigo.org/forum/viewtopic.php?id=17577" onclick="window.open(this.href);return false;">Foro en Ingles - http://piwigo.org/forum/viewtopic.php?id=17577</a><br><br> También disponible el proyecto bugtracker: <a href="http://piwigo.org/bugs/" onclick="window.open(this.href);return false;">http://piwigo.org/bugs/</a>';
 ?>
