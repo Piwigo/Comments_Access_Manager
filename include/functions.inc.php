@@ -36,8 +36,9 @@ function CM_admin_menu($menu)
  */
 function CM_CheckComment($comment_action, $comm)
 {
+  global $page, $conf, $user, $template;
+
   load_language('plugin.lang', CM_PATH);
-  global $infos, $conf, $user;
 
   $conf_CM = unserialize($conf['CommentsManager']);
 
@@ -47,8 +48,7 @@ function CM_CheckComment($comment_action, $comm)
     if ((isset($conf_CM[1]) and $conf_CM[1] == 'true') and $comm['author'] == 'guest')
     {
       $comment_action = 'reject';
-
-      array_push($infos, l10n('CM_Empty Author'));
+      array_push($page['errors'], l10n('CM_Not_Allowed_Author'));
     }
     
     if ((isset($conf_CM[6]) and $conf_CM[6] == 'true') and !is_a_guest() and $conf['comments_validation'])
@@ -70,7 +70,7 @@ function CM_CheckComment($comment_action, $comm)
     if ((isset($conf_CM[2]) and $conf_CM[2] == 'true') and (isset($conf_CM[4]) and $conf_CM[4] == 'false') and !CM_CheckAuthor($comm['author'])) // Comments authorized group set - Auto validation group unset 
     {
       $comment_action = 'reject'; // Comment rejected if author is not in the allowed group
-      array_push($infos, l10n('CM_Not_Allowed_Author'));
+      array_push($page['errors'], l10n('CM_Not_Allowed_Author'));
     }
     elseif ((isset($conf_CM[2]) and $conf_CM[2] == 'false') and (isset($conf_CM[4]) and $conf_CM[4] == 'true') and $conf['comments_validation']) // Comments authorized group unset - Auto validation group set
     {
@@ -88,7 +88,7 @@ function CM_CheckComment($comment_action, $comm)
       if (!CM_CheckAuthor($comm['author']))
       {
         $comment_action = 'reject'; // Comment rejected if author is not in the allowed group
-        array_push($infos, l10n('CM_Not_Allowed_Author'));
+        array_push($page['errors'], l10n('CM_Not_Allowed_Author'));
       }
       elseif (CM_CheckValidGroup($comm['author']) and $conf['comments_validation'])
       {

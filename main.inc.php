@@ -22,4 +22,7 @@ add_event_handler('get_admin_plugin_menu_links', 'CM_admin_menu');
 
 // Comments authorisation check
 add_event_handler('user_comment_check', 'CM_CheckComment', 50, 2);
+
+// Comments on album authorisation check
+add_event_handler('user_comment_check_albums', 'CM_CheckComment', 50, 2);
 ?>

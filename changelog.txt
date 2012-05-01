@@ -39,8 +39,11 @@ Plugin Name: Comments Access Manager
       2.3.7 - Add sk_SK translation (thanks to dodo)
       
       2.4.0 - Piwigo 2.4 compliant
+              Compatibility with Comments_on_Album plugin
               Add nl_NL translation (thanks to pauldaytona)
               Add pt_PT translation (thanks to klito)
               Add ru_RU translation (thanks to nadusha)
               Update pl_PL translation (thanks to T00kie)
+              Update pt_PT translation (thanks to PsyKick_RuhYn)
+              Update es_ES translation (thanks to crazydark)
               
