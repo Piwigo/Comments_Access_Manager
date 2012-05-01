@@ -26,14 +26,21 @@ Plugin Name: Comments Access Manager
 
       2.3.2 - Adding hu_HU translation (thanks to samli)
 
-      2.3.3 - Update it_IT, thanks to : Gdvpixel
+      2.3.3 - Update it_IT translation (thanks to : Gdvpixel)
 
-      2.3.4 - Add cs_CZ - Česky – Czech - Thanks to webprostor
-              Add uk_UA - Ukrainian - thanks to animan
+      2.3.4 - Add cs_CZ translation (thanks to webprostor)
+              Add uk_UA translation (thanks to animan)
 
-      2.3.5 - Update uk_UA, thanks to : animan
+      2.3.5 - Update uk_UA translation (thanks to animan)
               Update de_DE
 
-      2.3.6 - Add pl_PL - Polski - Polish - Thanks to kuba
-
-      2.3.7 - Add sk_SK - český - Czech - Thanks to : dodo
+      2.3.6 - Add pl_PL translation (thanks to kuba)
+      
+      2.3.7 - Add sk_SK translation (thanks to dodo)
+      
+      2.4.0 - Piwigo 2.4 compliant
+              Add nl_NL translation (thanks to pauldaytona)
+              Add pt_PT translation (thanks to klito)
+              Add ru_RU translation (thanks to nadusha)
+              Update pl_PL translation (thanks to T00kie)
+              

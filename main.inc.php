@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Comments Access Manager
-Version: 2.3.7
+Version: 2.4.0
 Description: Gérer l'accès aux commentaites - Manage comments access
 Plugin URI: http://piwigo.org/ext/extension_view.php?eid=545
 Author: Eric

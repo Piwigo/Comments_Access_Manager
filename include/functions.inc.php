@@ -108,7 +108,7 @@ function CM_CheckComment($comment_action, $comm)
  * 
  * @author   : author's name
  * 
- * @returns  : Boolean (true is user is allowed to post / false if not allowed)
+ * @returns  : Boolean (true when user is allowed to post / false if not allowed)
  * 
  */
 function CM_CheckAuthor($author)
