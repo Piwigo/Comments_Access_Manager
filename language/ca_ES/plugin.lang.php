@@ -23,4 +23,14 @@
 $lang['CM_Comments_For_Group'] = 'Permetre comentaris a un grup d\'usuaris';
 $lang['CM_Enable'] = 'Habilitat';
 $lang['CM_submit'] = 'Desar ajustos';
+$lang['CM_AllowedComm_Group'] = 'Seleccionar el grup d\'usuaris que poden enviar comentaris:';
+$lang['CM_Disable'] = 'Deshabilitat (per defecte)';
+$lang['CM_Empty Author'] = 'És obligatori el sobrenom <i>(nick)</i> de l\'autor del comentaris';
+$lang['CM_No_Anonymous_Comments'] = 'Sobrenom obligatori per als comentaris dels visitants';
+$lang['CM_Not_Allowed_Author'] = 'No està autoritzat per publicar comentaris. Si us plau, contacti amb l\'administrador del lloc.';
+$lang['CM_SubTitle'] = 'Configuració del complement';
+$lang['CM_Title'] = 'Comments Access Manager - Versió: ';
+$lang['CM_ValidComm_Group'] = 'Seleccionar el grup d\'usuaris que poden enviar comentaris sense que se\'ls requereixi prèvia validació:';
+$lang['CM_Validation_For_Group'] = 'Permetre comentaris sense la validació per part d\'un administrador';
+$lang['CM_save_config'] = 'Configuració desada correctament';
 ?>
