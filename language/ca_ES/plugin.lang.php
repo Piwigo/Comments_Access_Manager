@@ -33,4 +33,11 @@ $lang['CM_Title'] = 'Comments Access Manager - Versió: ';
 $lang['CM_ValidComm_Group'] = 'Seleccionar el grup d\'usuaris que poden enviar comentaris sense que se\'ls requereixi prèvia validació:';
 $lang['CM_Validation_For_Group'] = 'Permetre comentaris sense la validació per part d\'un administrador';
 $lang['CM_save_config'] = 'Configuració desada correctament';
+$lang['CM_CommentsForAll'] = 'La opció "Comentaris per a tots" està <b style="color:red;">habilitada</b>';
+$lang['CM_CommentsForRegistered'] = 'La opció "Comentaris per a tots" està <b style="color:red;">deshabilitada</b>';
+$lang['CM_CommentsValidationOff'] = 'La "Comentaris pendents de validar" està <b style="color:red;">deshabilitada</b>';
+$lang['CM_CommentsValidationOn'] = 'La "Comentaris pendents de validar" està <b style="color:red;">habilitada</b>';
+$lang['CM_Support_txt'] = 'El suport oficial d\'aquest complement es troba en el tema del fòrum:<br>
+<a href="http://piwigo.org/forum/viewtopic.php?id=17577" onclick="window.open(this.href);return false;">English forum - http://piwigo.org/forum/viewtopic.php?id=17577</a><br><br>
+El projecte Bugtracker també està disponible: <a href="http://piwigo.org/bugs/" onclick="window.open(this.href);return false;">http://piwigo.org/bugs/</a>';
 ?>
