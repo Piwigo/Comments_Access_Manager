@@ -46,4 +46,6 @@ Plugin Name: Comments Access Manager
               Update pl_PL translation (thanks to T00kie)
               Update pt_PT translation (thanks to PsyKick_RuhYn)
               Update es_ES translation (thanks to crazydark)
-              
+
+      2.4.1 - Add ca_ES translation (thanks to AlbertParera)
+              Update es_ES translation (thanks to petaqui)
