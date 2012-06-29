@@ -25,4 +25,7 @@ $lang['CM_CommentsValidationOffTitle'] = 'A &quot;Validação&quot; de comentár
 $lang['CM_GroupCommTitle'] = 'Permitir comentários a um grupo de utilizadores';
 $lang['CM_ValidCommTitle'] = 'Permitir comentários sem validação por um administrador';
 $lang['CM_commentTitle'] = 'Nome obrigatório para comentários de convidados';
+$lang['CM_GroupCommTitle_d'] = 'Esta opção permite de especificar um grupo De utilizadores que será autorizado a postar comentários quando a galeria esta configurada para não permitir os comentários para todos.
+<br><br>
+Por defeito, quando os <b>&quot;comentários para todos&quot;</b> estão desactivados, só os utilizadores registados podem Postar um comentário. Com esta opção, pode restringir Um pouco mais este funcionamento definindo um grupo de utilizadores. Assim, só os utilizadores registados e fazendo parte do grupo poderão postar comentários.';
 ?>
