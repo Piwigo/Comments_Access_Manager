@@ -29,4 +29,15 @@ $lang['CM_SubTitle'] = 'Eklenti yapılandırması';
 $lang['CM_Title'] = 'Yorum Erişim Yöneticisi - Sürüm: ';
 $lang['CM_save_config'] = 'Yapılandırma başarıyla kaydedildi!';
 $lang['CM_submit'] = 'Ayarları Kaydet';
+$lang['CM_CommentsValidationOff'] = 'Yorumlar için "Doğrulama" <b style="color:red;">Devre Dışı</b>';
+$lang['CM_CommentsValidationOn'] = 'Yorumlar için "Doğrulama" <b style="color:red;">Etkin</b>';
+$lang['CM_Comments_For_Group'] = 'Bir kullanıcı grubuna yorumlara izin verir';
+$lang['CM_Empty Author'] = 'Yorum yazarı için takma ad zorunludur!';
+$lang['CM_No_Anonymous_Comments'] = 'Ziyaretçi yorumları için takma ad zorunludur!';
+$lang['CM_Not_Allowed_Author'] = 'Üzgünüz,yorum göndermek için yetkiniz bulunmamaktadır.Lütfen site yönetimine başvurun.';
+$lang['CM_Support_txt'] = 'Bu eklenti için resmi desteğe sadece bu iki Piwigo forum başlığından erişebilirsiniz:<br>
+<a href="http://piwigo.org/forum/viewtopic.php?id=17577" onclick="window.open(this.href);return false;">English forum - http://piwigo.org/forum/viewtopic.php?id=17577</a><br><br>
+Proje bugtracker sayfası:<a href="http://piwigo.org/bugs/" onclick="window.open(this.href);return false;">http://piwigo.org/bugs/</a>';
+$lang['CM_ValidComm_Group'] = 'Doğrulama gerektirmeden yorum gönderme izni vereceğiniz kullanıcı grubunu seçin:';
+$lang['CM_Validation_For_Group'] = 'Bir yönetici tarafından doğrulama olmadan yorumlara izin verir';
 ?>
