@@ -21,23 +21,23 @@
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
 $lang['CM_AllowedComm_Group'] = 'Yorum yazmak için izin verilen kullanıcı grubunu seçin:';
-$lang['CM_CommentsForAll'] = '"Herkes yorum yapabilir" option is <b style="color:red;">etkin</b>';
-$lang['CM_CommentsForRegistered'] = '"Herkes yorum yapabilir" option is <b style="color:red;">devre dışı</b>';
+$lang['CM_CommentsForAll'] = '"Hepsi için yoruma izin ver" seçeneği <b style="color:red;">Etkin</b>';
+$lang['CM_CommentsForRegistered'] = '"Hepsi için yoruma izin ver" seçeneği <b style="color:red;">Devre Dışı</b>';
 $lang['CM_Disable'] = 'Devre Dışı (varsayılan)';
 $lang['CM_Enable'] = 'Etkinleştir';
 $lang['CM_SubTitle'] = 'Eklenti yapılandırması';
 $lang['CM_Title'] = 'Yorum Erişim Yöneticisi - Sürüm: ';
 $lang['CM_save_config'] = 'Yapılandırma başarıyla kaydedildi!';
 $lang['CM_submit'] = 'Ayarları Kaydet';
-$lang['CM_CommentsValidationOff'] = 'Yorumlar için "Doğrulama" <b style="color:red;">Devre Dışı</b>';
-$lang['CM_CommentsValidationOn'] = 'Yorumlar için "Doğrulama" <b style="color:red;">Etkin</b>';
-$lang['CM_Comments_For_Group'] = 'Bir kullanıcı grubuna yorumlara izin verir';
+$lang['CM_CommentsValidationOff'] = 'Yorumlar için "Onay" gerekliliği <b style="color:red;">Devre Dışı</b>';
+$lang['CM_CommentsValidationOn'] = 'Yorumlar için "Onay" gerekliliği <b style="color:red;">Etkin</b>';
+$lang['CM_Comments_For_Group'] = 'Bir kullanıcı grubu yorumlarına izin verir';
 $lang['CM_Empty Author'] = 'Yorum yazarı için takma ad zorunludur!';
 $lang['CM_No_Anonymous_Comments'] = 'Ziyaretçi yorumları için takma ad zorunludur!';
-$lang['CM_Not_Allowed_Author'] = 'Üzgünüz,yorum göndermek için yetkiniz bulunmamaktadır.Lütfen site yönetimine başvurun.';
+$lang['CM_Not_Allowed_Author'] = 'Üzgünüz,yorum göndermek için yetkiniz bulunmamaktadır.Lütfen yöneticiye başvurun.';
 $lang['CM_Support_txt'] = 'Bu eklenti için resmi desteğe sadece bu iki Piwigo forum başlığından erişebilirsiniz:<br>
 <a href="http://piwigo.org/forum/viewtopic.php?id=17577" onclick="window.open(this.href);return false;">English forum - http://piwigo.org/forum/viewtopic.php?id=17577</a><br><br>
 Proje bugtracker sayfası:<a href="http://piwigo.org/bugs/" onclick="window.open(this.href);return false;">http://piwigo.org/bugs/</a>';
-$lang['CM_ValidComm_Group'] = 'Doğrulama gerektirmeden yorum gönderme izni vereceğiniz kullanıcı grubunu seçin:';
-$lang['CM_Validation_For_Group'] = 'Bir yönetici tarafından doğrulama olmadan yorumlara izin verir';
+$lang['CM_ValidComm_Group'] = 'Onay gerektirmeden yorum gönderme izni vereceğiniz kullanıcı grubunu seçin:';
+$lang['CM_Validation_For_Group'] = 'Bir yönetici tarafından onay olmadan yorumlara izin verir';
 ?>
