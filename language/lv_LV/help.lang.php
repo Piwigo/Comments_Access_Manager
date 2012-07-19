@@ -29,4 +29,10 @@ $lang['CM_GroupCommTitle'] = 'Atļaut komentārus lietotāju grupai';
 $lang['CM_ValidCommTitle'] = 'Atļaut komentārus bez administratora validācijas';
 $lang['CM_commentTitle_d'] = 'Ja opcija <b>&quot;Komentāri visiem&quot;</b> ir aktīva (pilnvaras nereģistrētiem apmeklētājiem nosūtīt komentārus), šī iespēja ļauj nereģistrētiem apmeklētājiem, lietojot atbilstošu segvārdu, veikt komentārus.';
 $lang['CM_commentTitle'] = 'Viesa komentāriem obligāts Segvārs (niks) ';
+$lang['CM_ValidComm2Title_d'] = 'Šī opcija ļauj izveidot lietotāju grupu, kas var publicēt komentārus bez administratora validācijas, laikā, kad galerija ir konfigurēta <u>neatļaut komentārus visiem</u> un, kad kamentāriem nepieciešama administratora validācija.
+<br><br>
+Pēc noklusējuma, kad opcija <b>&quot;komentāri visiem&quot;</b> un komentāru validācija ir iespējota, visu reģistrēto lietotāju komentāriem pirms publicēšanas galerijā ir jābūt administratora validētiem. Šī opcija dod jūsu izveidotās grupas biedriem iespēju publicēt komentārus bez īpašas apstiprināšanas.   ';
+$lang['CM_ValidCommTitle_d'] = 'Šī opcija ļauj izveidot lietotāju grupu, kas var publicēt komentārus bez administratora validācijas, laikā, kad galerija ir konfigurēta <u>neatļaut komentārus visiem</u> un, kad kamentāriem nepieciešama administratora validācija.
+<br><br>
+Pēc noklusējuma, kad opcija <b>&quot;komentāri visiem&quot;</b> ir atspējota un komentāru validācija ir iespējota, visu reģistrēto lietotāju komentāriem pirms publicēšanas galerijā ir jābūt administratora validētiem. Šī opcija dod jūsu izveidotās grupas biedriem iespēju publicēt komentārus bez īpašas apstiprināšanas.     ';
 ?>
