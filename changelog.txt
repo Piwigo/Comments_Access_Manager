@@ -75,3 +75,6 @@ Plugin Name: Comments Access Manager
               Update sk_SK translation (thanks to dodo)
               Update lv_LV translation (thanks to agrisans)
               Add tr_TR translation (thanks to Nakre and LazBoy)
+
+2012-10-05:
+      2.4.4 - Add da_DK, thanks to : Kaare
