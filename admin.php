@@ -16,7 +16,6 @@ if (!defined('CM_PATH')) define('CM_PATH' , PHPWG_PLUGINS_PATH.basename(dirname(
 include_once (PHPWG_ROOT_PATH.'/include/constants.php');
 
 load_language('plugin.lang', CM_PATH);
-load_language('help.lang', CM_PATH);
 
 
 // +-----------------------------------------------------------------------+

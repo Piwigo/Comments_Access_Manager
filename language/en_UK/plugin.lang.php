@@ -31,4 +31,22 @@ $lang['CM_CommentsForRegistered'] = '"Comments for all" option is <b style="colo
 $lang['CM_CommentsValidationOn'] = '"Validation" for comments is <b style="color:red;">enabled</b>';
 $lang['CM_CommentsValidationOff'] = '"Validation" for comments is <b style="color:red;">disabled</b>';
 // --------- End: New or revised $lang ---- from version 2.2.6
+
+// --------- Starting below: New or revised $lang ---- from version 2.2.7
+$lang['CM_commentTitle'] = 'Nickname mandatory for unregistered visitors comments';
+$lang['CM_commentTitle_d'] = 'If <b>&quot;Comments for all&quot;</b> are enabled, this option will force the unregistred visitor to enter a nickname for his comment.';
+$lang['CM_GroupCommTitle'] = 'Allow comments to a user group';
+$lang['CM_GroupCommTitle_d'] = 'This option allows you to specify a group of users who will be allowed to post comments when the gallery is configured to not allow comments to all.
+<br><br>
+By default, when <b>&quot;comments for all&quot;</b> are disabled, only registered users may post comments. With this option, you can restrict this behavior by specifying a user group. Thus, only registered users and member of the group can post comments.';
+$lang['CM_ValidCommTitle'] = 'Allow comments without approval by an administrator';
+$lang['CM_ValidCommTitle_d'] = 'This option allows you to specify a group of users whose comments will be exempted by the administrator validation when the gallery is configured to <u>not allow comments to all</u> and comments validation by an administrator is required.
+<br><br>
+By default, when <b>&quot;comments for all&quot;</b> are disabled and validation comments is activated, the comments from all registered users are submitted to validation by an administrator before being displayed on the gallery. With this option, you can allow group members to post comments without this prior approval.';
+$lang['CM_ValidComm2Title_d'] = 'This option allows you to specify a group of users whose comments will be exempted by the administrator validation when the gallery is configured to <u>allow comments to all</u> and comments validation by an administrator is required.
+<br><br>
+By default, when <b>&quot;comments for all&quot;</b> and and validation comments are both enabled, the comments from all registered users are submitted to validation by an administrator before being displayed on the gallery. With this option, you can allow group members to post comments without this prior approval.';
+$lang['CM_CommentsValidationOffTitle'] = '&quot;Validation&quot; for comments is disabled';
+$lang['CM_CommentsValidationOffTitle_d'] = 'Enable the option to access advanced settings.';
+// --------- End: New or revised $lang ---- from version 2.2.7
 ?>

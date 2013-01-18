@@ -78,3 +78,9 @@ Plugin Name: Comments Access Manager
 
 2012-10-05:
       2.4.4 - Add da_DK, thanks to : Kaare
+
+2013-01-18:
+      2.4.5 - help.lang.php files content merged in plugin.lang.php files
+              help.lang.php files removed
+              Correction and improvement of the Translation Repository en_UK
+              Add zh_CN, thanks to : dennisyan

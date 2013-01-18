@@ -39,4 +39,15 @@ $lang['CM_Support_txt'] = 'A bővítmény hivatalos támogatását az alábbi Pi
 <a href="http://piwigo.org/forum/viewtopic.php?id=17577" onclick="window.open(this.href);return false;">Angol fórum - http://piwigo.org/forum/viewtopic.php?id=17577</a><br><br>A projekt hibakövető itt található: <a href="http://piwigo.org/bugs/" onclick="window.open(this.href);return false;">http://piwigo.org/bugs/</a>';
 $lang['CM_Validation_For_Group'] = 'Hozzászólások engedélyezése rendszergazda ellenőrzése nélkül';
 $lang['CM_ValidComm_Group'] = 'Válassza ki mely csoporthoz tartozó felhasználók írhatnak hozzászólásokat a rendszergazda ellenőrzése nélkül:';
+$lang['CM_commentTitle'] = 'A hozzászóláshoz a vendégeknek is kötelező felhasználónév megadása';
+$lang['CM_commentTitle_d'] = 'Amennyiben a <b>&quot;Bárki hozzászólhat&quot;</b> opció aktív (nem regisztrált látogatók is hozzászólhatnak), ezzel a beállítással megkövetelheti, hogy a vendégek is adjanak meg felhasználónevet a hozzászólásukhoz.';
+$lang['CM_GroupCommTitle'] = 'Csoport tagok hozzászólásainak engedélyezése';
+$lang['CM_GroupCommTitle_d'] = 'Amennyiben a galéria úgy van beállítva, hogy ne szólhasson hozzá mindenki, ezzel a beállítással engedélyezheti bizonyos csoport tagjainak a hozzászólást.
+<br><br>
+Alapesetben a <b>&quot;Bárki hozzászólhat&quot;</b> opció inaktív, csak regisztrált felhasználók szólhatnak hozzá. Ezt a viselkedést letilthatjuk ezzel a funkcióval, így regisztrált felhasználók és egy bizonyos csoport tagjainak engedélyezi a hozzászólást.';
+$lang['CM_CommentsValidationOffTitle'] = '&quot;Engedélyezés szükséges&quot; opció kikapcsolva';
+$lang['CM_CommentsValidationOffTitle_d'] = 'További beállítások eléréséhez engedélyezze ezt az opciót.';
+$lang['CM_ValidComm2Title_d'] = 'Alapesetben, ha a <b>&quot;Bárki hozzászólhat&quot;</b> és az <b>&quot;Ellenőrzés szükséges&quot;</b> opciók be vannak kapcsolva, a regisztrált felhasználók hozzászólásai csak a rendszergazda jóváhagyása után válnak láthatóvá. Ezzel a beállítással lehetővé teheti, hogy egy bizonyos csopothoz tartozó felhasználók hozzászólásai ellenőrzés nélkül jelenhessenek meg. ';
+$lang['CM_ValidCommTitle'] = 'Hozzászólások engedélyezése rendszergazda ellenőrzése nélkül';
+$lang['CM_ValidCommTitle_d'] = 'Alapesetben, ha a <b>&quot;Bárki hozzászólhat&quot;</b> opció inaktív, valamint az <b>&quot;Ellenőrzés szükséges&quot;</b> opció be van kapcsolva, a regisztrált felhasználók hozzászólásai csak a rendszergazda jóváhagyása után válnak láthatóvá. Ezzel a beállítással lehetővé teheti, hogy egy bizonyos csopothoz tartozó felhasználók hozzászólásai ellenőrzés nélkül jelenhessenek meg. ';
 ?>
