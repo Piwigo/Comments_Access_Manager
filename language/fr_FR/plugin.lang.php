@@ -47,6 +47,6 @@ $lang['CM_ValidComm2Title_d'] = 'Cette option permet de spécifier un groupe d\'
 <br><br>
 Par défaut, lorsque les <b>&quot;commentaires pour tous&quot;</b> et la validation des commentaires sont activés, les commentaires de tous les utilisateurs inscrits sont soumis à validation par un administrateur avant d\'être visibles sur la galerie. Avec cette option, vous pouvez autoriser les membres d\'un groupe de votre choix à poster des commentaires sans que cette validation préalable ne soit nécessaire.';
 $lang['CM_CommentsValidationOffTitle'] = 'L\'option &quot;Validation&quot; pour les commentaires est désactivée';
-$lang['CM_CommentsValidationOffTitle_d'] = 'Activez l\'option pour accéder, ici, aux paramètres étendus.';
+$lang['CM_CommentsValidationOffTitle_d'] = 'Activez l\'option pour afficher les paramètres étendus.';
 // --------- End: New or revised $lang ---- from version 2.2.7
 ?>
