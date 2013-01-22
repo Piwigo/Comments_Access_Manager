@@ -20,7 +20,7 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['CM_Validation_For_Group'] = '管理员评论无需审核';
+$lang['CM_Validation_For_Group'] = '评论无需管理员审核';
 $lang['CM_No_Anonymous_Comments'] = '未注册用户必须填写昵称';
 $lang['CM_Support_txt'] = 'Piwigo 论坛的此主题为本插件的唯一官方支持:<br>
 <a href="http://piwigo.org/forum/viewtopic.php?id=17577" onclick="window.open(this.href);return false;">English forum - http://piwigo.org/forum/viewtopic.php?id=17577</a><br><br>
@@ -53,6 +53,6 @@ $lang['CM_ValidComm2Title_d'] = '本选项使您能够指定一组用户，当�
 <br><br>
 根据默认设置，当 <b>&quot;允许所有人评论&quot;</b> 和评论审核功能被启用时，注册用户发布的评论在被相册显示前，将提交管理员进行审核。而通过本选项，您可以选定某一组的注册用户，允许他们的评论无需预先通过审核就能发布。';
 $lang['CM_CommentsValidationOffTitle'] = '&quot;评论审核&quot; 已禁用';
-$lang['CM_CommentsValidationOffTitle_d'] = '启用本选项，以在此查看更多参数。';
+$lang['CM_CommentsValidationOffTitle_d'] = '在"设置-选项-评论"页启用本选项，以在此设置进一步的参数。';
 $lang['CM_GroupCommTitle'] = '向某一组用户开放评论';
 ?>
