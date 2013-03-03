@@ -90,3 +90,5 @@ Plugin Name: Comments Access Manager
               Code refactory : Change config variables to assoc array and $_POST vars control before writing conf in database - Thx to flop25 for his advices ;-)
               Update zh_CN, thanks to : winson and dennisyan
               Add pt_BR, thanks to : flaviove
+
+      2.5.1 - Bug fixed : Installation from scratch did not work

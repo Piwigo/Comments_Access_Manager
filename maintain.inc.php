@@ -53,9 +53,11 @@ function plugin_activate()
   CM_Obsolete_Files();
   
   include_once (CM_PATH.'include/upgradedb.inc.php');
+  
+  $conf_CM = unserialize($conf['CommentsManager']);
 
   // Database upgrade process
-  if (isset($conf['CommentsManager']))
+  if (isset($conf_CM[0]))
   {
     $conf_CM = unserialize($conf['CommentsManager']);
     
@@ -76,6 +78,11 @@ function plugin_activate()
     {
       upgradeCM_240_250();
     }
+    // Preset for future upgrades
+//  if (isset($conf_CM['CMVersion']))
+//  {
+
+//  }
   }
   
   // Update plugin version number in #_config table and check consistency of #_plugins table
