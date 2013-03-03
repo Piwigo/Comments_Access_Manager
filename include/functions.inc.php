@@ -45,13 +45,13 @@ function CM_CheckComment($comment_action, $comm)
   if ($conf['comments_forall'])
   {
     // Does not allow empty author name on comments for all
-    if ((isset($conf_CM[1]) and $conf_CM[1] == 'true') and $comm['author'] == 'guest')
+    if ((isset($conf_CM['CM_No_Comment_Anonymous']) and $conf_CM['CM_No_Comment_Anonymous'] == 'true') and $comm['author'] == 'guest')
     {
       $comment_action = 'reject';
       array_push($page['errors'], l10n('CM_Not_Allowed_Author'));
     }
     
-    if ((isset($conf_CM[6]) and $conf_CM[6] == 'true') and !is_a_guest() and $conf['comments_validation'])
+    if ((isset($conf_CM['CM_GROUPVALID2']) and $conf_CM['CM_GROUPVALID2'] == 'true') and !is_a_guest() and $conf['comments_validation'])
     {
       if (CM_CheckValidGroup($comm['author']) or is_admin())
       {
@@ -67,12 +67,12 @@ function CM_CheckComment($comment_action, $comm)
 // Rules on comments NOT for all
   if (!$conf['comments_forall'] and !is_admin())
   {
-    if ((isset($conf_CM[2]) and $conf_CM[2] == 'true') and (isset($conf_CM[4]) and $conf_CM[4] == 'false') and !CM_CheckAuthor($comm['author'])) // Comments authorized group set - Auto validation group unset 
+    if ((isset($conf_CM['CM_GROUPCOMM']) and $conf_CM['CM_GROUPCOMM'] == 'true') and (isset($conf_CM['CM_GROUPVALID1']) and $conf_CM['CM_GROUPVALID1'] == 'false') and !CM_CheckAuthor($comm['author'])) // Comments authorized group set - Auto validation group unset 
     {
       $comment_action = 'reject'; // Comment rejected if author is not in the allowed group
       array_push($page['errors'], l10n('CM_Not_Allowed_Author'));
     }
-    elseif ((isset($conf_CM[2]) and $conf_CM[2] == 'false') and (isset($conf_CM[4]) and $conf_CM[4] == 'true') and $conf['comments_validation']) // Comments authorized group unset - Auto validation group set
+    elseif ((isset($conf_CM['CM_GROUPCOMM']) and $conf_CM['CM_GROUPCOMM'] == 'false') and (isset($conf_CM['CM_GROUPVALID1']) and $conf_CM['CM_GROUPVALID1'] == 'true') and $conf['comments_validation']) // Comments authorized group unset - Auto validation group set
     {
       if (CM_CheckValidGroup($comm['author']) and $conf['comments_validation'])
       {
@@ -83,7 +83,7 @@ function CM_CheckComment($comment_action, $comm)
         $comment_action = 'moderate'; // Comment needs moderation if author is not in the validated group
       }
     }
-    elseif ((isset($conf_CM[2]) and $conf_CM[2] == 'true') and (isset($conf_CM[4]) and $conf_CM[4] == 'true') and $conf['comments_validation']) // Comments authorized group set - Auto validation group set
+    elseif ((isset($conf_CM['CM_GROUPCOMM']) and $conf_CM['CM_GROUPCOMM'] == 'true') and (isset($conf_CM['CM_GROUPVALID1']) and $conf_CM['CM_GROUPVALID1'] == 'true') and $conf['comments_validation']) // Comments authorized group set - Auto validation group set
     {
       if (!CM_CheckAuthor($comm['author']))
       {
@@ -118,7 +118,7 @@ function CM_CheckAuthor($author)
 	// Get CM configuration
   $conf_CM = unserialize($conf['CommentsManager']);
   
-  if (isset($conf_CM[3]) and $conf_CM[3] <> -1)
+  if (isset($conf_CM['CM_ALLOWCOMM_GROUP']) and $conf_CM['CM_ALLOWCOMM_GROUP'] <> -1)
   {
     $query = '
 SELECT u.id,
@@ -129,7 +129,7 @@ FROM '.USERS_TABLE.' AS u
   INNER JOIN '.USER_GROUP_TABLE.' AS ug
     ON u.id = ug.user_id
 WHERE u.username LIKE "'.$author.'"
-  AND ug.group_id = '.$conf_CM[3].'
+  AND ug.group_id = '.$conf_CM['CM_ALLOWCOMM_GROUP'].'
 ;';
 
     $count = pwg_db_num_rows(pwg_query($query));
@@ -162,16 +162,16 @@ function CM_CheckValidGroup($author)
   
   if ($conf['comments_forall'])
   {
-    if (isset($conf_CM[7]) and $conf_CM[7] <> -1)
+    if (isset($conf_CM['CM_VALIDCOMM2_GROUP']) and $conf_CM['CM_VALIDCOMM2_GROUP'] <> -1)
     {
-      $group_id = $conf_CM[7];
+      $group_id = $conf_CM['CM_VALIDCOMM2_GROUP'];
     }
   }
   else
   {
-    if (isset($conf_CM[5]) and $conf_CM[5] <> -1)
+    if (isset($conf_CM['CM_VALIDCOMM1_GROUP']) and $conf_CM['CM_VALIDCOMM1_GROUP'] <> -1)
     {
-      $group_id = $conf_CM[5];
+      $group_id = $conf_CM['CM_VALIDCOMM1_GROUP'];
     }
   }
 

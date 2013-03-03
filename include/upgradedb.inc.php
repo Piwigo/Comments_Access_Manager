@@ -44,7 +44,7 @@ WHERE param = "CommentsManager"
     
   $Newconf_CM = unserialize($conf_CM['value']);
   
-  $Newconf_CM[0] = $version;
+  $Newconf_CM[CMVersion] = $version;
   
   $update_conf = serialize($Newconf_CM);
 
@@ -123,6 +123,42 @@ WHERE param = "CommentsManager"
   $Newconf_CM[6] = 'false';
   $Newconf_CM[7] = '-1';
   
+  $update_conf = serialize($Newconf_CM);
+
+  conf_update_param('CommentsManager', pwg_db_real_escape_string($update_conf));
+}
+
+
+/* upgrade from 2.4 to 2.5 */
+/* *********************** */
+function upgradeCM_240_250()
+{
+  global $conf;
+
+  // Upgrading options - Changing config variables to assoc array
+  // ------------------------------------------------------------
+  
+  // Upgrade $conf_CM options
+  $conf_CM = unserialize($conf['CommentsManager']);
+
+  $Newconf_CM = array(
+    'CMVersion'               => $conf_CM[0],
+    'CM_No_Comment_Anonymous' => $conf_CM[1],
+    'CM_GROUPCOMM'            => $conf_CM[2],
+    'CM_ALLOWCOMM_GROUP'      => $conf_CM[3],
+    'CM_GROUPVALID1'          => $conf_CM[4],
+    'CM_VALIDCOMM1_GROUP'     => $conf_CM[5],
+    'CM_GROUPVALID2'          => $conf_CM[6],
+    'CM_VALIDCOMM2_GROUP'     => $conf_CM[7]
+  );
+
+  // unset obsolete conf
+  // -------------------
+  for ($i = 0; $i <= 7; $i++)
+  {
+    unset ($conf_CM[$i]);
+  }
+
   $update_conf = serialize($Newconf_CM);
 
   conf_update_param('CommentsManager', pwg_db_real_escape_string($update_conf));

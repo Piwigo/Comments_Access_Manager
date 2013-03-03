@@ -15,7 +15,16 @@ function plugin_install()
   $plugin =  CM_Infos(CM_PATH);
   $version = $plugin['version'];
 	
-  $default = array($version,'false','false',-1,'false',-1,'false',-1);
+  $default = array(
+    'CMVersion'               => $version,
+    'CM_No_Comment_Anonymous' => 'false',
+    'CM_GROUPCOMM'            => 'false',
+    'CM_ALLOWCOMM_GROUP'      => -1,
+    'CM_GROUPVALID1'          => 'false',
+    'CM_VALIDCOMM1_GROUP'     => -1,
+    'CM_GROUPVALID2'          => 'false',
+    'CM_VALIDCOMM2_GROUP'     => -1
+    );
 
 	$query = '
 SELECT param
@@ -60,6 +69,12 @@ function plugin_activate()
     if (version_compare($conf_CM[0], '2.2.2') < 0)
     {
       upgradeCM_221_222();
+    }
+
+    // upgrade from 2.4 to 2.5
+    if (version_compare($conf_CM[0], '2.5.0') < 0)
+    {
+      upgradeCM_240_250();
     }
   }
   

@@ -33,17 +33,14 @@ $version = $plugin['version'];
 
 	if (isset($_POST['submit']) and isset($_POST['CM_No_Comment_Anonymous']) and isset($_POST['CM_GroupComm']) and isset($_POST['CM_GroupValid1']) and isset($_POST['CM_GroupValid2']))
   {
-
-		$newconf_CM = array(
-      $version,
-      $_POST['CM_No_Comment_Anonymous'],
-      $_POST['CM_GroupComm'],
-      (isset($_POST['CM_AllowComm_Group'])?$_POST['CM_AllowComm_Group']:''),
-      $_POST['CM_GroupValid1'],
-      (isset($_POST['CM_ValidComm_Group1'])?$_POST['CM_ValidComm_Group1']:''),
-      $_POST['CM_GroupValid2'],
-      (isset($_POST['CM_ValidComm_Group2'])?$_POST['CM_ValidComm_Group2']:''),
-      );
+    $newconf_CM['CMVersion'] = $version;
+    $newconf_CM['CM_No_Comment_Anonymous'] = (isset($_POST['CM_No_Comment_Anonymous']) ? $_POST['CM_No_Comment_Anonymous'] : 'false');
+    $newconf_CM['CM_GROUPCOMM'] = (isset($_POST['CM_GroupComm']) ? $_POST['CM_GroupComm'] : 'false');
+    $newconf_CM['CM_ALLOWCOMM_GROUP'] = (isset($_POST['CM_AllowComm_Group']) ? $_POST['CM_AllowComm_Group'] : '');
+    $newconf_CM['CM_GROUPVALID1'] = (isset($_POST['CM_GroupValid1']) ? $_POST['CM_GroupValid1'] : 'false');
+    $newconf_CM['CM_VALIDCOMM1_GROUP'] = (isset($_POST['CM_ValidComm_Group1']) ? $_POST['CM_ValidComm_Group1'] : '');
+    $newconf_CM['CM_GROUPVALID2'] = (isset($_POST['CM_GroupValid2']) ? $_POST['CM_GroupValid2'] : 'false');
+    $newconf_CM['CM_VALIDCOMM2_GROUP'] = (isset($_POST['CM_ValidComm_Group2']) ? $_POST['CM_ValidComm_Group2'] : '');
 
     $conf['CommentsManager'] = serialize($newconf_CM);
 
@@ -75,19 +72,19 @@ ORDER BY name ASC
     $groups[$row['id']] = $row['name'];
 
     //configuration value for users group allowed to post comments
-    if (isset($conf_CM[3]) and $conf_CM[3] == $row['id'])
+    if (isset($conf_CM['CM_ALLOWCOMM_GROUP']) and $conf_CM['CM_ALLOWCOMM_GROUP'] == $row['id'])
 		{
 	  	$AllowComm = $row['id'];
 		}
 
     //configuration value for users group allowed to post comments
-    if (isset($conf_CM[5]) and $conf_CM[5] == $row['id'])
+    if (isset($conf_CM['CM_VALIDCOMM1_GROUP']) and $conf_CM['CM_VALIDCOMM1_GROUP'] == $row['id'])
 		{
 	  	$ValidComm1 = $row['id'];
 		}
 
     //configuration value for users group allowed to post comments
-    if (isset($conf_CM[7]) and $conf_CM[7] == $row['id'])
+    if (isset($conf_CM['CM_VALIDCOMM2_GROUP']) and $conf_CM['CM_VALIDCOMM2_GROUP'] == $row['id'])
 		{
 	  	$ValidComm2 = $row['id'];
 		}
@@ -128,18 +125,18 @@ ORDER BY name ASC
     'CM_PATH'                       => CM_PATH,
     'CM_CFA'                        => $conf['comments_forall'],
     'CM_VALIDATION'                 => $conf['comments_validation'],
-    'CM_VERSION'                    => $conf_CM[0],
-		'CM_NO_COMMENT_ANO_TRUE'        => $conf_CM[1]=='true' ?  'checked="checked"' : '' ,
-		'CM_NO_COMMENT_ANO_FALSE'       => $conf_CM[1]=='false' ?  'checked="checked"' : '' ,
-    'CM_GROUPCOMM_TRUE'             => $conf_CM[2]=='true' ?  'checked="checked"' : '' ,
-    'CM_GROUPCOMM_FALSE'            => $conf_CM[2]=='false' ?  'checked="checked"' : '' ,
-    'CM_ALLOWCOMM_GROUP'            => $conf_CM[3],
-    'CM_GROUPVALID1_TRUE'           => $conf_CM[4]=='true' ?  'checked="checked"' : '' ,
-    'CM_GROUPVALID1_FALSE'          => $conf_CM[4]=='false' ?  'checked="checked"' : '' ,
-    'CM_VALIDCOMM1_GROUP'           => $conf_CM[5],
-    'CM_GROUPVALID2_TRUE'           => $conf_CM[6]=='true' ?  'checked="checked"' : '' ,
-    'CM_GROUPVALID2_FALSE'          => $conf_CM[6]=='false' ?  'checked="checked"' : '' ,
-    'CM_VALIDCOMM2_GROUP'           => $conf_CM[7],
+    'CM_VERSION'                    => $conf_CM['CMVersion'],
+		'CM_NO_COMMENT_ANO_TRUE'        => $conf_CM['CM_No_Comment_Anonymous']=='true' ?  'checked="checked"' : '' ,
+		'CM_NO_COMMENT_ANO_FALSE'       => $conf_CM['CM_No_Comment_Anonymous']=='false' ?  'checked="checked"' : '' ,
+    'CM_GROUPCOMM_TRUE'             => $conf_CM['CM_GROUPCOMM']=='true' ?  'checked="checked"' : '' ,
+    'CM_GROUPCOMM_FALSE'            => $conf_CM['CM_GROUPCOMM']=='false' ?  'checked="checked"' : '' ,
+    'CM_ALLOWCOMM_GROUP'            => $conf_CM['CM_ALLOWCOMM_GROUP'],
+    'CM_GROUPVALID1_TRUE'           => $conf_CM['CM_GROUPVALID1']=='true' ?  'checked="checked"' : '' ,
+    'CM_GROUPVALID1_FALSE'          => $conf_CM['CM_GROUPVALID1']=='false' ?  'checked="checked"' : '' ,
+    'CM_VALIDCOMM1_GROUP'           => $conf_CM['CM_VALIDCOMM1_GROUP'],
+    'CM_GROUPVALID2_TRUE'           => $conf_CM['CM_GROUPVALID2']=='true' ?  'checked="checked"' : '' ,
+    'CM_GROUPVALID2_FALSE'          => $conf_CM['CM_GROUPVALID2']=='false' ?  'checked="checked"' : '' ,
+    'CM_VALIDCOMM2_GROUP'           => $conf_CM['CM_VALIDCOMM2_GROUP'],
     )
   );
 
