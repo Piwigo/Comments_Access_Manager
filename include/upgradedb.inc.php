@@ -44,7 +44,7 @@ WHERE param = "CommentsManager"
     
   $Newconf_CM = unserialize($conf_CM['value']);
   
-  $Newconf_CM[CMVersion] = $version;
+  $Newconf_CM['CMVersion'] = $version;
   
   $update_conf = serialize($Newconf_CM);
 
