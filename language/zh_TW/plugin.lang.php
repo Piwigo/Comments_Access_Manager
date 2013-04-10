@@ -33,4 +33,8 @@ $lang['CM_Comments_For_Group'] = '允許一組用戶的評論';
 $lang['CM_Disable'] = '停用(預設)';
 $lang['CM_Empty Author'] = '評論作者的綽號是必須的！';
 $lang['CM_Enable'] = '啟用';
+$lang['CM_No_Anonymous_Comments'] = '訪客的評論必須要有暱稱';
+$lang['CM_Not_Allowed_Author'] = '很抱歉，您沒有權限發表評論。請與網站管理員聯繫。';
+$lang['CM_save_config'] = '設定成功儲存！';
+$lang['CM_submit'] = '儲存設定';
 ?>
