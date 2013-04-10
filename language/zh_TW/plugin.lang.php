@@ -29,4 +29,8 @@ $lang['CM_CommentsValidationOff'] = '“驗證”於評論是<b style="color:red
 $lang['CM_CommentsValidationOffTitle'] = '&quot;驗證&quot; 於評論是停用';
 $lang['CM_CommentsValidationOffTitle_d'] = '啟用存取進階設定的選項。';
 $lang['CM_CommentsValidationOn'] = '“驗證”於評論是<b style="color:red;">啟用</b>';
+$lang['CM_Comments_For_Group'] = '允許一組用戶的評論';
+$lang['CM_Disable'] = '停用(預設)';
+$lang['CM_Empty Author'] = '評論作者的綽號是必須的！';
+$lang['CM_Enable'] = '啟用';
 ?>
