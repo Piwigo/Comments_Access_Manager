@@ -37,4 +37,9 @@ $lang['CM_No_Anonymous_Comments'] = '訪客的評論必須要有暱稱';
 $lang['CM_Not_Allowed_Author'] = '很抱歉，您沒有權限發表評論。請與網站管理員聯繫。';
 $lang['CM_save_config'] = '設定成功儲存！';
 $lang['CM_submit'] = '儲存設定';
+$lang['CM_ValidComm_Group'] = '選擇群組的使用者允許未經驗證可發表評論：';
+$lang['CM_GroupCommTitle'] = '允許的群組使用者群組的評論';
+$lang['CM_ValidCommTitle'] = '允許未經批准的評論';
+$lang['CM_Validation_For_Group'] = '允許未經驗證的評論';
+$lang['CM_commentTitle'] = '未註冊的訪客意見暱稱必須的';
 ?>
