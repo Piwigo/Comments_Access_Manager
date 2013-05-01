@@ -92,3 +92,6 @@ Plugin Name: Comments Access Manager
               Add pt_BR, thanks to : flaviove
 
       2.5.1 - Bug fixed : Installation from scratch did not work
+
+2013-05-01:
+      2.5.2 - Add zh_TW, thanks to : tedx
