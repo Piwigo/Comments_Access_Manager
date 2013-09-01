@@ -96,3 +96,7 @@ Plugin Name: Comments Access Manager
 
 2013-05-01:
       2.5.3 - Add zh_TW, thanks to : tedx
+
+2013-09-01:
+      2.5.4 - Add sv_SE, thanks to : kabo
+              Update zh_TW, thanks to : azq1231
