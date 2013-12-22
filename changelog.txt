@@ -100,3 +100,7 @@ Plugin Name: Comments Access Manager
 2013-09-01:
       2.5.4 - Add sv_SE, thanks to : kabo
               Update zh_TW, thanks to : azq1231
+
+2013-12-22:
+      2.6.0 - Compatibility checked with Piwigo 2.6
+              Add bg_BG, thanks to : neddrag
