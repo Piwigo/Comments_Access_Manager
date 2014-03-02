@@ -1,57 +1,43 @@
 Plugin Name: Comments Access Manager
 ** Change log **
 
-2011-05-23:
       2.2.0 - Initial Release
 
-2011-05-26:
       2.2.1 - Add new feature : Users in a specified group can post comments without admin validation when "Comments for all" is disabled and admin validation is enabled.
 
       2.2.2 - Add new feature : Users in a specified group can post comments without admin validation when "Comments for all" is enabled and admin validation is enabled.
 
-2011-06-01:
       2.2.3 - Bug fixed : If "Comments for all" is disabled and guest user uses a nickname already in use, the comment was automatically accepted and validated.
 
-2011-06-02:
       2.2.4 - Bug fixed : Installation from scratch error.
               Bug fixed : If "Comments for all" is disabled and a specified group of users can post comments without admin validation, the administrator had to still validate them.
 
       2.2.5 - Bug fixed : Validation was always need even if "Validation" option was unset.
 
-2011-06-06:
       2.2.6 - Bug fixed related with piwigo's bug 2323 : Validation was still needed on comments modification
               Admin panel refactory 
 
-2011-10-01:
       2.3.0 - Compliance with Piwigo 2.3
               Editing language files for better compatibility with the new online translation tool 
 
-2012-02-17:
       2.3.1 - Adding es_ES translation (thx to jpr928)
               Adding lv_LV translation (thx to Aivars Baldone)
               Translation keys improvement : 1 key deleted
 
-2012-02-24:
       2.3.2 - Adding hu_HU translation (thanks to samli)
 
-2012-02-25:
       2.3.3 - Update it_IT translation (thanks to : Gdvpixel)
 
-2012-02-26:
       2.3.4 - Add cs_CZ translation (thanks to webprostor)
               Add uk_UA translation (thanks to animan)
 
-2012-03-02:
       2.3.5 - Update uk_UA translation (thanks to animan)
               Update de_DE
 
-2012-03-28:
       2.3.6 - Add pl_PL translation (thanks to kuba)
 
-2012-04-05:
       2.3.7 - Add sk_SK translation (thanks to dodo)
 
-2012-05-01:
       2.4.0 - Piwigo 2.4 compliant
               Compatibility with Comments_on_Album plugin
               Add nl_NL translation (thanks to pauldaytona)
@@ -61,31 +47,25 @@ Plugin Name: Comments Access Manager
               Update pt_PT translation (thanks to PsyKick_RuhYn)
               Update es_ES translation (thanks to crazydark)
 
-2012-05-17:
       2.4.1 - Add ca_ES translation (thanks to AlbertParera)
               Update es_ES translation (thanks to petaqui)
 
-2012-06-16:
       2.4.2 - Update ca_ES translation (thanks to AlbertParera)
               Add el_GR translation (thanks to bas_alba)
 
-2012-08-06:
       2.4.3 - Update el_GR translation (thanks to bas_alba)
               Update pt_PT translation (thanks to alahel76)
               Update sk_SK translation (thanks to dodo)
               Update lv_LV translation (thanks to agrisans)
               Add tr_TR translation (thanks to Nakre and LazBoy)
 
-2012-10-05:
       2.4.4 - Add da_DK, thanks to : Kaare
 
-2013-01-18:
       2.4.5 - help.lang.php files content merged in plugin.lang.php files
               help.lang.php files removed
               Correction and improvement of the Translation Repository en_UK
               Add zh_CN, thanks to : dennisyan
 
-2013-03-03:
       2.5.0 - Compliance with Piwigo 2.5
               Code refactory : Change config variables to assoc array and $_POST vars control before writing conf in database - Thx to flop25 for his advices ;-)
               Update zh_CN, thanks to : winson and dennisyan
@@ -94,13 +74,12 @@ Plugin Name: Comments Access Manager
       2.5.1 - Bug fixed : Installation from scratch did not work
       2.5.2 - Bug fixed : Installation from scratch did not work
 
-2013-05-01:
       2.5.3 - Add zh_TW, thanks to : tedx
 
-2013-09-01:
       2.5.4 - Add sv_SE, thanks to : kabo
               Update zh_TW, thanks to : azq1231
 
-2013-12-22:
       2.6.0 - Compatibility checked with Piwigo 2.6
               Add bg_BG, thanks to : neddrag
+
+      2.6.1 - Add fa_IR, thanks to : ipic
