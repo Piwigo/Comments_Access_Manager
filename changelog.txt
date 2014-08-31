@@ -83,3 +83,5 @@ Plugin Name: Comments Access Manager
               Add bg_BG, thanks to : neddrag
 
       2.6.1 - Add fa_IR, thanks to : ipic
+
+      2.7.0 - Compatibility with Piwigo 2.7
