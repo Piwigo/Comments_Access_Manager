@@ -39,3 +39,9 @@ $lang['CM_Not_Allowed_Author'] = 'Beklager, du har ikke tillatelse til å skrive
 $lang['CM_SubTitle'] = 'Konfigurasjon av programtillegget';
 $lang['CM_Title'] = 'Kommentarers Tilgangs Manager - Versjon:';
 $lang['CM_ValidCommTitle'] = 'Tillat kommentarer uten godkjenning av en administrator';
+$lang['CM_Support_txt'] = 'Den offisielle støtten til dette programtillegget er kun på disse Piwigo forumemner:<br> <a href="http://piwigo.org/forum/viewtopic.php?id=17577" onclick="window.open(this.href);return false;"> engelsk forum - http://piwigo.org /forum/viewtopic.php?id=17577</a><br><br>
+Også tilgjengelig, prosjektets Bugtracker: <a href="http://piwigo.org/bugs/" onclick="window.open(this.href);return false;"> http://piwigo.org/bugs/</a>';
+$lang['CM_ValidComm2Title_d'] = 'Dette alternativet lar deg angi en gruppe brukere hvor kommentarene deres vil bli fritatt fra valideringen av administrator når galleriet er konfigurert til <u>tillat kommentarer til alle</u> og kommentarer validering av en administrator er nødvendig.<br><br>
+
+Som standard, når <b>&quot;kommentarer for alle&quot;</b> og  validerings kommentarer er begge aktivert, kommentarene fra alle registrerte brukere er sendt til godkjenning av en administrator før de blir vist på galleriet. Med dette alternativet kan du tillate gruppemedlemmene å skrive kommentarer uten denne forhåndsgodkjenning.
+';
