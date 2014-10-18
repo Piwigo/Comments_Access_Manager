@@ -85,3 +85,5 @@ Plugin Name: Comments Access Manager
       2.6.1 - Add fa_IR, thanks to : ipic
 
       2.7.0 - Compatibility with Piwigo 2.7
+	  
+	  2.7.1 - Add nb_NO, thanks to : paulen
