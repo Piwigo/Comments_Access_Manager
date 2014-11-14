@@ -46,7 +46,7 @@ $lang['CM_ValidComm2Title_d'] = 'Dette alternativet lar deg angi en gruppe bruke
 Som standard, når <b>&quot;kommentarer for alle&quot;</b> og  godkjenning av kommentarer er aktivert, blir kommentarene fra alle registrerte brukere sendt til godkjenning av en administrator før de blir vist på galleriet. Med dette alternativet kan du tillate gruppemedlemmer å skrive kommentarer uten denne forhåndsgodkjenning.
 ';
 $lang['CM_ValidComm_Group'] = 'Velg en gruppe av brukere som har tillatelse til å skrive kommentarer uten godkjenning:';
-$lang['CM_ValidCommTitle_d'] = 'Dette alternativet lar deg spesifisere en gruppe brukere hvis kommentarer vil bli fritatt fra administrators godkjenning når galleriet er konfigurert til <u>ikke tillat kommentarer for alle</u>og kommentar godkjenning av en administrator er nødvendig.
+$lang['CM_ValidCommTitle_d'] = 'Dette alternativet lar deg spesifisere en gruppe brukere hvis kommentarer vil bli fritatt fra administrators godkjenning når galleriet er konfigurert til <u>ikke tillat kommentarer for alle</u> og kommentar godkjenning av en administrator er nødvendig.
 <br><br>
 Som standard, når <b>&quot; kommentarer for alle&quot;</b> er deaktivert og godkjenning av kommentarer er aktivert, blir kommentarene fra alle registrerte brukere sendt til godkjenning av en administrator før de blir vist på galleriet. Med dette alternativet kan du tillate gruppemedlemmene å skrive kommentarer uten forhåndsgodkjenning.
 ';
