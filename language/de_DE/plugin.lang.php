@@ -20,7 +20,7 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['CM_AllowedComm_Group'] = 'Wählen der Benutzern Gruppe gestattet, Kommentare anzulegen:';
+$lang['CM_AllowedComm_Group'] = 'Benutzergruppen auswählen, die Kommentare verfassen dürfen:';
 $lang['CM_CommentsForAll'] = '"Kommentare für alle"-Option <b style="color:red;">ist aktiviert</b>';
 $lang['CM_CommentsForRegistered'] = '"Kommentare für alle"-Option <b style="color:red;">ist Deaktiviert</b>';
 $lang['CM_CommentsValidationOff'] = '"Validation" für Kommentare <b style="color:red;">ist Deaktiviert</b>';
@@ -54,4 +54,3 @@ Standardmäßig wird, wenn <b>&quot;Kommentare für alle&quot;</b> und die Valid
 $lang['CM_ValidCommTitle_d'] = 'Diese Option können Sie eine Gruppe von Benutzern, deren Kommentare werden ohne Überprüfung durch den Administrator, wenn die Galerie zu <u>konfiguriert ist nicht erlaubt Kommentare zu allen</u> und dass die Validierung von Kommentaren durch einen Administrator erforderlich zur Verfügung gestellt werden.
 <br><br>
 Standardmäßig wird, wenn <b>&quot;Kommentare für alle&quot;</b> ist deaktiviert und die Validierung von Kommentaren aktiviert ist, sind die Kommentare von allen registrierten Benutzern vorbehalten Validierung durch einen Administrator, bevor sie sichtbar auf der Galerie. Mit dieser Option können Sie erlauben den Mitgliedern einer Gruppe Ihrer Wahl, um Kommentare ohne eine solche vorherige Prüfung veröffentlichen ist nicht erforderlich.';
-?>
