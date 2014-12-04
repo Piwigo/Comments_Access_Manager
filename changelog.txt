@@ -90,3 +90,5 @@ Plugin Name: Comments Access Manager
 	  
 	  2.7.2 - Update nb_NO, thanks to paulen
 			  Update de_DE, thanks to bigant
+
+	  2.7.3 - Fix german translation bug (may cause white page issue)
