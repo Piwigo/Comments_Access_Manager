@@ -50,8 +50,6 @@ $lang['CM_GroupCommTitle_d'] = 'Mit dieser Option können Sie eine Gruppe von Nu
 Standardmäßig können, wenn <b>&quot;Kommentare für alle&quot;</b> Option deaktiviert ist,  nur registrierte Benutzer Kommentare verfassen. Mit dieser Option können Sie dieses Verhalten beschränken. So dürfen nur registrierte Benutzer und Mitglieder dieser Gruppe Kommentare schreiben.';
 $lang['CM_ValidComm2Title_d'] = 'This option allows you to specify a group of users whose comments will be exempted by the administrator validation when the gallery is configured to <u>allow comments to all</u> and comments validation by an administrator is required.
 <br><br>
-By default, when <b>&quot;comments for all&quot;</b> and and validation comments are both enabled, the comments from all registered users are submitted to validation by an administrator before being displayed on the gallery. With this option, you can allow group members to post comments without this prior approval.';
-<br><br>
 Standardmäßig wird, wenn <b>&quot;Kommentare für alle&quot;</b> und die Validierung der Kommentare aktiviert sind, sind die Kommentare von allen registrierten Benutzern vorbehalten Validierung durch einen Administrator, bevor sie sichtbar auf der Galerie. Mit dieser Option können Sie erlauben den Mitgliedern einer Gruppe Ihrer Wahl, um Kommentare ohne eine solche vorherige Prüfung veröffentlichen ist nicht erforderlich.';
 $lang['CM_ValidCommTitle_d'] = 'This option allows you to specify a group of users whose comments will be exempted by the administrator validation when the gallery is configured to <u>not allow comments to all</u> and comments validation by an administrator is required.
 <br><br>
