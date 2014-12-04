@@ -20,6 +20,7 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
+
 $lang['CM_AllowedComm_Group'] = 'Benutzergruppen auswählen, die Kommentare verfassen dürfen:';
 $lang['CM_CommentsForAll'] = 'Option »Kommentare für alle« <b style="color:red;">ist aktiviert</b>';
 $lang['CM_CommentsForRegistered'] = 'Option »Kommentare für alle« <b style="color:red;">ist deaktiviert</b>';
